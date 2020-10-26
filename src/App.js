@@ -9,10 +9,7 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
 import Login from './components/Login.js'
 import Register from './components/Register.js'
-import {
-	AuthenticationContext,
-	AuthenticationContextProvider,
-} from './contexts/AuthenticationContext'
+import Header from './components/header'
 
 // function AppSwitch() {
 //   // const { user } = useContext(AuthenticationContext)
@@ -21,8 +18,9 @@ import {
 
 function App() {
 	return (
-		<div className='App'>
+		<div style={{top:'-220px'}} >
 			<BrowserRouter>
+			<Header/>
 				<Switch>
 					<Route path='/register' component={Register} />
 					<Route path='/login' component={Login} />

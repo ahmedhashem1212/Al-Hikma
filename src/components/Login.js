@@ -278,7 +278,6 @@ const Login = () => {
 
 	return (
 		<Container maxWidth='xl' className={classes.backgroundContainer}>
-			{redirect ? <Redirect exact to={'/register'} /> : authenticationView()}
 		</Container>
 	)
 }

@@ -3,7 +3,8 @@
 body {
   font-family: 'Lato', sans-serif;
   box-sizing: border-box;
-  padding-top: 75px;
+  background-color: '80c721';
+  
 }
 
 header {

@@ -12,6 +12,16 @@ import './Style.css';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import { makeStyles } from '@material-ui/core/styles'
+import Card from 'react-bootstrap/Card';
+import CardColumns from 'react-bootstrap/CardColumns'
+import Grid from '@material-ui/core/Grid'
+import CardGroup from 'react-bootstrap/CardGroup'
+import potato from '../assets/potato.jpg';
+import onion from '../assets/onion2.jpg'
+import garlic from '../assets/garlic3.jpg'
+import beans from '../assets/beans.jpg'
+import capucha from '../assets/capucha.jpg'
+import artichoke from '../assets/artichoke.jpg'
 
 const useStyles = makeStyles((theme) => ({
 	backgroundContainer: {
@@ -34,6 +44,56 @@ const Register = () => {
 	const [loading, setLoading] = useState(false)
 
 	const [username, setUsername] = useState('')
+	const Veg = [
+
+		{
+			name:"Potatoes",
+			desc:"Potatoes is one of fresh products that Egypt specialized to grow, packing and export for many regions in the world. Spunta is a very conventional and well-known potato, suitable for production in many climates. Spunta potatoes are yellow fleshed, and make fantastic potato salads. They are also great steamed or boiled.",
+			type:"Spunta",
+			Packing:"yellow bag 10 /25 Kg",
+			src:potato
+		},
+		{
+			name:"Onions",
+			desc:"One of top three exporting products from Egypt, for many regions in the world. We have the red onions and brown onions.",
+				type:"red onions-brown onions",
+			Packing:"red bag 10 /25 Kg",
+			src:onion
+		},
+		{
+			name:"Garlic",
+			desc:"In Egypt, garlic is strong competitive in the international market in compare with other countries.it has begun to be exported to countries worldwide, the Egyptian garlic is an excellent source of vitamins C and B6, selenium, and manganese, and also contains some fiber, phosphorus, potassium, calcium, iron, and copper. ",
+			type:"fresh garlic",
+			Packing:"carton-bag 5Kg",
+			src:garlic
+		},
+		{
+			name:"Green beans",
+			desc:"Green beans are eaten around the world, and are sold fresh and frozen. They can be eaten raw or steamed, boiled, stir-fried, or baked. We export the Egyptian green beans for several country with good quality and packing.",
+			type:"Fresh green beans",
+			Packing:"carton 5/8Kg",
+			src:beans
+		},
+		{
+			name:"Iceberg lettuce (Capucha)",
+			desc:"Iceberg lettuce provides significant amounts of vitamins A and K. It also has small amounts of many other healthy nutrients. Although it’s low in fiber, it has a high water content, making it a refreshing choice during hot weather. It also provides calcium, potassium, vitamin C, and folate.",
+			type:"Iceberg lettuce ",
+			Packing:"carton-plastic box 7/8 kg",
+			src:capucha
+		},
+		{
+			name:"Artichoke",
+			desc:"Artichokes are rich in fiber, vitamins, minerals, and antioxidants. Particularly high in folate and vitamins C and K, they also supply important minerals, such as magnesium, phosphorus, potassium, and iron. The Egyptian artichoke has 2 famous varieties: the local artichoke and the French artichoke",
+			type:"Local artichoke and the French artichoke ",
+			Packing:"plastic box -carton 4.5/ 5 kg",
+			src:artichoke
+		},
+		
+		
+	]
+	
+	
+	
 	const content = [
 		{
 			title: 'Vulputate Mollis Ultricies Fermentum Parturient',
@@ -65,15 +125,14 @@ const Register = () => {
 	]
 
 	const SignupPage = () => (
-		<Container maxWidth='xl' style={{ minHeight: '100vh' }}>
+		<Container maxWidth='xl' style={{ minHeight: '100vh', paddingTop:"100px" }}>
 			{/* Logo */}
 			
 		</Container>
 	)
 
 	return (
-		<div>
-		<div>
+		<div >
 		
 		<Slider className="slider-wrapper"
 		 autoplay= "800">
@@ -95,9 +154,64 @@ const Register = () => {
 						</span>
 					</section>
 				</div>
+				
 			))}
 		</Slider>
-		</div>
+		<div>
+			<div>
+				<h1 style={{paddingLeft:'230px', paddingTop:'50px'}}>Vegetables</h1>
+				
+				<div style={{
+					backgroundColor:'#4ed715', height:'3px', width:'50px',marginLeft:'230px'
+				}}></div>
+			</div>
+		<Grid
+				container
+				direction='column'
+				alignItems='flex-start'
+				style={{ paddingTop:'50px', paddingRight:"230px", paddingLeft:"230px"
+				,height:"2000px" }}
+				spacing={5}
+				
+			>
+				
+		{/* <CardDeck> */}
+			{Veg.map((item)=>(
+
+<Grid item xs={4} spacing={5}> 
+<Card style={{
+	width:"350px",
+}}>
+  <Card.Img variant="top" src={item.src} style={{
+	  height:"200px"
+  }} />
+  <Card.Body style={{
+	//   opacity:'80%',
+	// backgroundColor:'#4ed715'
+  }}>
+	<Card.Title style={{ color:'black', fontWeight:'bold', fontFamily:'Trebuchet-MS' }}>{item.name}</Card.Title>
+	<Card.Text style={{ color:'black', fontFamily:'Trebuchet-MS'}}>
+	 {item.desc}
+	 </Card.Text>
+  </Card.Body>
+  <Card.Footer>
+  <Card.Title style={{fontSize:"20px", color:'green',fontFamily:'Trebuchet-MS'}}>Type</Card.Title>
+	<Card.Text>
+	 {item.type}
+	 </Card.Text>
+	 <Card.Title style={{fontSize:"20px", color:'green',fontFamily:'Raleway'}}>Packing</Card.Title>
+	<Card.Text>
+	 {item.Packing}
+	 </Card.Text>
+
+  </Card.Footer>
+</Card>
+</Grid>
+			))}
+
+
+</Grid>
+</div>
 		</div>
 	)
 }

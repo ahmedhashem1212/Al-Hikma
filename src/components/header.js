@@ -16,13 +16,14 @@ import { makeStyles } from '@material-ui/core/styles'
 import "bootstrap/dist/css/bootstrap.min.css"
 const useStyles = makeStyles((theme) => ({
 	backgroundContainer: {
-	  background: "#3EC586",
+	  background: "#4ed715",
 	  padding: "10px 0px",
 	  top: "0",
 	  zIndex: "1",
 	  maxHeight: "90px",
 	  minHeight: "70px",
       position: "sticky",
+      opacity:'85%'
 
 	},
 	meliorLogo: {

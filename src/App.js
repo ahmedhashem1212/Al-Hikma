@@ -18,9 +18,9 @@ import Header from './components/header'
 
 function App() {
 	return (
-		<div style={{top:'-220px'}} >
+		<div style={{ top: '-220px' }}>
 			<BrowserRouter>
-			<Header/>
+				<Header />
 				<Switch>
 					<Route path='/register' component={Register} />
 					<Route path='/login' component={Login} />

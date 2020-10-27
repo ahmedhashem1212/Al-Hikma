@@ -9,7 +9,8 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
 import Login from './components/Login.js'
 import Register from './components/Register.js'
-import Header from './components/header'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 // function AppSwitch() {
 //   // const { user } = useContext(AuthenticationContext)
@@ -27,6 +28,7 @@ function App() {
 
 					<Route component={Register} />
 				</Switch>
+				<Footer/>
 			</BrowserRouter>
 		</div>
 	)

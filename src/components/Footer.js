@@ -9,6 +9,7 @@ import FormControl from 'react-bootstrap/FormControl'
 import Button from 'react-bootstrap/Button'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import { COLORS } from './Colors'
+import fruits2 from '../assets/fruits2.jpg'
 
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
@@ -34,38 +35,16 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: '2%',
 	},
 }))
-
-function Header() {
+const image ='https://www.just-juice.ca/images/footer.gif'
+function Footer() {
 	const classes = useStyles()
 	return (
-		<Container maxWidth='xl' className={classes.backgroundContainer}>
-			<Navbar>
-				<Navbar.Brand href='#home' style={{ color: 'white' }}>
-					<img src={logo} style={{ width: 220, marginTop: 0, padding: 0 }} />
-				</Navbar.Brand>
-
-				<Nav className='justify-content-end' style={{ paddingLeft: '53%' }}>
-					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
-						Home
-					</Nav.Link>
-					<NavDropdown title={'Products'} id='nav-dropdown'>
-						<NavDropdown.Item href='#action/3.1'>Vegetables</NavDropdown.Item>
-						<NavDropdown.Item href='#action/3.2'>Fruits</NavDropdown.Item>
-					</NavDropdown>
-					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
-						Calender
-					</Nav.Link>
-					<Nav.Link
-						id='nav-dropdown'
-						href='#contactus'
-						style={{ color: 'white' }}
-					>
-						Contact Us
-					</Nav.Link>
-				</Nav>
+		<Container maxWidth='xl' >
+			<Navbar fixed="bottom"style={{backgroundImage:`url(${image})`}} >
+		
 			</Navbar>
 		</Container>
 	)
 }
 
-export default Header
+export default Footer

@@ -14,7 +14,7 @@ import fruits2 from '../assets/fruits2.jpg'
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
 
-import logo from '../Logo2.png'
+import logo from '../Logo2.jpg'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 const useStyles = makeStyles((theme) => ({

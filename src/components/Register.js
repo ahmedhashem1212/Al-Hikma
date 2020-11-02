@@ -13,7 +13,7 @@ import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import { makeStyles } from '@material-ui/core/styles'
 import Card from 'react-bootstrap/Card';
-import CardColumns from 'react-bootstrap/CardColumns'
+import useMediaQuery from "@material-ui/core/useMediaQuery"
 import Grid from '@material-ui/core/Grid'
 import CardGroup from 'react-bootstrap/CardGroup'
 import potato from '../assets/potato.jpg';
@@ -29,7 +29,8 @@ import pomegranate from '../assets/Pomegranate.jpg'
 import watermelons from '../assets/Watermelons.jpg'
 import fruits from '../assets/fruits.jpg'
 import fruits2 from '../assets/fruits2.jpg'
-
+import { useTheme } from "@material-ui/core/styles"
+import Typography from '@material-ui/core/Typography';
 const useStyles = makeStyles((theme) => ({
 	backgroundContainer: {
 	  background: COLORS.brightBlack,
@@ -40,17 +41,23 @@ const useStyles = makeStyles((theme) => ({
 	  minHeight: "70px",
 	  position: "sticky",
 	},
+	footer: {
+		backgroundColor: '#839184',
+		// marginTop: theme.spacing(8),
+		padding: theme.spacing(6, 0),
+		height:'20px'
+	  },
 	meliorLogo: {
 	  width: 180,
 	  marginLeft: "2%",
-	},
-  }))	
+	}  
+  }
+  ))	
 
 const Register = () => {
+	const theme = useTheme()
+	const matches = useMediaQuery(theme.breakpoints.up("md"))
 	const classes = useStyles()
-	const [loading, setLoading] = useState(false)
-
-	const [username, setUsername] = useState('')
 	const Veg = [
 
 		{
@@ -61,12 +68,13 @@ const Register = () => {
 			src:potato
 		},
 		{
-			name:"Onions",
-			desc:"One of top three exporting products from Egypt, for many regions in the world. We have the red onions and brown onions.",
-				type:"red onions-brown onions",
-			Packing:"red bag 10 /25 Kg",
-			src:onion
+			name:"Iceberg lettuce (Capucha)",
+			desc:"Iceberg lettuce provides significant amounts of vitamins A and K. It also has small amounts of many other healthy nutrients. Although it’s low in fiber, it has a high water content, making it a refreshing choice during hot weather. It also provides calcium, potassium, vitamin C, and folate.",
+			type:"Iceberg lettuce ",
+			Packing:"carton-plastic box 7/8 kg",
+			src:capucha
 		},
+		
 		{
 			name:"Garlic",
 			desc:"In Egypt, garlic is strong competitive in the international market in compare with other countries.it has begun to be exported to countries worldwide, the Egyptian garlic is an excellent source of vitamins C and B6, selenium, and manganese, and also contains some fiber, phosphorus, potassium, calcium, iron, and copper. ",
@@ -82,12 +90,13 @@ const Register = () => {
 			src:beans
 		},
 		{
-			name:"Iceberg lettuce (Capucha)",
-			desc:"Iceberg lettuce provides significant amounts of vitamins A and K. It also has small amounts of many other healthy nutrients. Although it’s low in fiber, it has a high water content, making it a refreshing choice during hot weather. It also provides calcium, potassium, vitamin C, and folate.",
-			type:"Iceberg lettuce ",
-			Packing:"carton-plastic box 7/8 kg",
-			src:capucha
+			name:"Onions",
+			desc:"One of top three exporting products from Egypt, for many regions in the world. We have the red onions and brown onions.",
+				type:"red onions-brown onions",
+			Packing:"red bag 10 /25 Kg",
+			src:onion
 		},
+		
 		{
 			name:"Artichoke",
 			desc:"Artichokes are rich in fiber, vitamins, minerals, and antioxidants. Particularly high in folate and vitamins C and K, they also supply important minerals, such as magnesium, phosphorus, potassium, and iron. The Egyptian artichoke has 2 famous varieties: the local artichoke and the French artichoke",
@@ -108,6 +117,14 @@ const Register = () => {
 			src:grapes
 		},
 		{
+			name:'Watermelons',
+			desc:"Generally, watermelon has a high water content.  As far as fruits go, watermelon is one of the lowest in calories. The main exporting variety for the watermelon in Egypt is Skata.",
+			type:"Skata",
+			Packing:"carton 20 kg",
+			src:watermelons
+			
+		},
+		{
 			name:'Lemons',
 			desc:"Lemons are a type of yellow-skinned citrus fruits that grow on the lemon tree. All types of lemons are known for their acidic, sour taste with some varieties being sweeter than others. We are actually exporting the Egyptian lemon for many countries.",
 			type:"Adalia Lemon",
@@ -123,13 +140,6 @@ const Register = () => {
 			type:"Wonderful",
 			Packing:"carton 4/5 kg",
 			src:pomegranate
-			
-		},{
-			name:'Watermelons',
-			desc:"Generally, watermelon has a high water content.  As far as fruits go, watermelon is one of the lowest in calories. The main exporting variety for the watermelon in Egypt is Skata.",
-			type:"Skata",
-			Packing:"carton 20 kg",
-			src:watermelons
 			
 		},
 		{
@@ -173,8 +183,8 @@ const Register = () => {
 	)
 
 	return (
+	
 		<div >
-		
 		<Slider className="slider-wrapper"
 		 autoplay= "800">
 			{content.map((item, index) => (
@@ -200,37 +210,37 @@ const Register = () => {
 				
 			))}
 		</Slider>
-		<div>
+		{matches?(	
+			<div> 
 			<div>
-				<h1 style={{paddingLeft:'230px', paddingTop:'50px'}}>Vegetables</h1>
+			<div>
+				<h1 style={{paddingLeft:'15rem', paddingTop:'5rem'}}>Vegetables</h1>
 				
 				<div style={{
-					backgroundColor:'#4ed715', height:'3px', width:'50px',marginLeft:'230px'
+					backgroundColor:'#4ed715', height:'3px', width:'50px',marginLeft:'15rem'
 				}}></div>
 			</div>
-		<Grid
+		 <Grid
 				container
-				direction='column'
+				justify='flex-start'
+				direction='row'
 				alignItems='flex-start'
-				style={{ paddingTop:'50px', paddingRight:"230px", paddingLeft:"230px"
-				,height:"1350px" }}
-				spacing={5}
+				style={{ paddingTop:'5rem', paddingLeft:"15rem",paddingRight:'10rem',
+				height:'85rem', width:'100%'}}
+				
 				
 			>
 				
-		{/* <CardDeck> */}
 			{Veg.map((item)=>(
 
-<Grid item xs={4} spacing={5}> 
+<Grid item xs={4} > 
 <Card style={{
-	width:"350px",
+	width:"95%",padding:'0px 0px 0px 0px'
 }}>
   <Card.Img variant="top" src={item.src} style={{
 	  height:"200px"
   }} />
   <Card.Body style={{
-	//   opacity:'80%',
-	// backgroundColor:'#4ed715'
   }}>
 	<Card.Title style={{ color:'black', fontWeight:'bold', fontFamily:'Trebuchet-MS' }}>{item.name}</Card.Title>
 	<Card.Text style={{ color:'black', fontFamily:'Trebuchet-MS'}}>
@@ -256,38 +266,87 @@ const Register = () => {
 </Grid>
 </div>
 
-
-
 <div>
-				<h1 style={{paddingLeft:'230px', paddingTop:'50px'}}>Fruits</h1>
+				<h1 style={{paddingLeft:'230px', paddingTop:'5rem'}}>Fruits</h1>
 				
 				<div style={{
 					backgroundColor:'#4ed715', height:'3px', width:'50px',marginLeft:'230px'
 				}}></div>
-			</div>
+</div>
 		<Grid
 				container
-				direction='column'
+				justify='flex-start'
+				direction='row'
 				alignItems='flex-start'
-				style={{ paddingTop:'50px', paddingRight:"230px", paddingLeft:"230px"
-				,height:"1300px" }}
-				spacing={5}
+				style={{ paddingTop:'5rem', paddingLeft:"15rem",paddingRight:'10rem',
+				height:'85rem', width:'100%'}}
 				
 			>
 				
-		{/* <CardDeck> */}
 			{Fruits.map((item)=>(
 
 <Grid item xs={4} spacing={5}> 
 <Card style={{
-	width:"350px",
+	width:"95%",padding:'0px 0px 0px 0px'
+}}>
+  <Card.Img variant="top" src={item.src} style={{
+	  height:"200px"
+  }} />
+  <Card.Body >
+	<Card.Title style={{ color:'black', fontWeight:'bold', fontFamily:'Trebuchet-MS' }}>{item.name}</Card.Title>
+	<Card.Text style={{ color:'black', fontFamily:'Trebuchet-MS'}}>
+	 {item.desc}
+	 </Card.Text>
+  </Card.Body>
+  <Card.Footer>
+  <Card.Title style={{fontSize:"20px", color:'green',fontFamily:'Trebuchet-MS'}}>Type</Card.Title>
+	<Card.Text>
+	 {item.type}
+	 </Card.Text>
+	 <Card.Title style={{fontSize:"20px", color:'green',fontFamily:'Raleway'}}>Packing</Card.Title>
+	<Card.Text>
+	 {item.Packing}
+	 </Card.Text>
+
+  </Card.Footer>
+</Card>
+</Grid>
+
+			))}
+
+
+</Grid>
+</div>
+):(
+	<div> 
+			<div>
+				<h1 style={{paddingLeft:'2rem', paddingTop:'5rem',fontSize:'25px'}}>Vegetables</h1>
+				
+				<div style={{
+					backgroundColor:'#4ed715', height:'3px', width:'50px',marginLeft:'2.5rem'
+				}}></div>
+			</div>
+		 <Grid
+				container
+				justify='flex-start'
+				direction='column'
+				alignItems='flex-start'
+				style={{ paddingTop:'2rem', paddingLeft:"3rem",
+				 width:'90%'}}
+				
+				
+			>
+				
+			{Veg.map((item)=>(
+
+<Grid item xs={100} > 
+<Card style={{
+padding:'0px 0px 0px 0px'
 }}>
   <Card.Img variant="top" src={item.src} style={{
 	  height:"200px"
   }} />
   <Card.Body style={{
-	//   opacity:'80%',
-	// backgroundColor:'#4ed715'
   }}>
 	<Card.Title style={{ color:'black', fontWeight:'bold', fontFamily:'Trebuchet-MS' }}>{item.name}</Card.Title>
 	<Card.Text style={{ color:'black', fontFamily:'Trebuchet-MS'}}>
@@ -311,7 +370,63 @@ const Register = () => {
 
 
 </Grid>
-		</div>
+
+
+
+<div>
+				<h1 style={{paddingLeft:'2rem', paddingTop:'5rem',fontSize:'25px'}}>Fruits</h1>
+				
+				<div style={{
+					backgroundColor:'#4ed715', height:'3px', width:'50px',marginLeft:'2.5rem'
+				}}></div>
+</div>
+		<Grid
+				container
+				justify='flex-start'
+				direction='column'
+				alignItems='flex-start'
+				style={{ paddingTop:'2rem', paddingLeft:"3rem",
+				 width:'90%'}}
+				
+			>
+				
+			{Fruits.map((item)=>(
+
+<Grid item xs={100} > 
+<Card style={{
+padding:'0px 0px 0px 0px'
+}}>
+  <Card.Img variant="top" src={item.src} style={{
+	  height:"200px"
+  }} />
+  <Card.Body >
+	<Card.Title style={{ color:'black', fontWeight:'bold', fontFamily:'Trebuchet-MS' }}>{item.name}</Card.Title>
+	<Card.Text style={{ color:'black', fontFamily:'Trebuchet-MS'}}>
+	 {item.desc}
+	 </Card.Text>
+  </Card.Body>
+  <Card.Footer>
+  <Card.Title style={{fontSize:"20px", color:'green',fontFamily:'Trebuchet-MS'}}>Type</Card.Title>
+	<Card.Text>
+	 {item.type}
+	 </Card.Text>
+	 <Card.Title style={{fontSize:"20px", color:'green',fontFamily:'Raleway'}}>Packing</Card.Title>
+	<Card.Text>
+	 {item.Packing}
+	 </Card.Text>
+
+  </Card.Footer>
+</Card>
+</Grid>
+
+			))}
+
+
+</Grid>
+
+</div>
+)}
+</div>
 	)
 }
 

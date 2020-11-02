@@ -19,7 +19,7 @@ import Footer from './components/Footer'
 
 function App() {
 	return (
-		<div style={{ top: '-220px' }}>
+		<div >
 			<BrowserRouter>
 				<Header />
 				<Switch>

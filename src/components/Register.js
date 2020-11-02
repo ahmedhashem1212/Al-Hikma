@@ -155,19 +155,17 @@ const Register = () => {
 	
 	const content = [
 		{
-			title: 'Vulputate Mollis Ultricies Fermentum Parturient',
+			title: 'AL HIKMA For Export ',
 			description:
-			'Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Cras justo odio, dapibus ac facilisis.',
-			button: 'Read More',
+			'Al Hikma EG for export is a family business and Egyptian company for exporting vegetables and fruits established in 1991',
+			button: 'Learn more',
 			image: fruits,
-			user: 'Luan Gjokaj',
-			userProfile: 'https://i.imgur.com/JSW6mEk.png'
 		},
 		{
-			title: 'Tortor Dapibus Commodo Aenean Quam',
+			title: 'Work In Several Vegetables and Fruits',
 			description:
-			'Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui.',
-			button: 'Discover',
+			'Our company aims to provide good quality oriented to valued customers',
+			button: 'See our Products',
 			image: fruits2,
 			user: 'Erich Behrens',
 			userProfile: 'https://i.imgur.com/0Clfnu7.png'
@@ -200,12 +198,7 @@ const Register = () => {
 						<p>{item.description}</p>
 						<button>{item.button}</button>
 					</div>
-					<section>
-						<img src={item.userProfile} alt={item.user} />
-						<span>
-							Posted by <strong>{item.user}</strong>
-						</span>
-					</section>
+					
 				</div>
 				
 			))}

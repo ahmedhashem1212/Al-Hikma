@@ -35,14 +35,15 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: '2%',
 	},
 }))
-const image ='https://www.just-juice.ca/images/footer.gif'
+const image = 'https://www.just-juice.ca/images/footer.gif'
 function Footer() {
 	const classes = useStyles()
 	return (
-		<Container maxWidth='xl' >
-			<Navbar fixed="bottom"style={{backgroundImage:`url(${image})`}} >
-		
-			</Navbar>
+		<Container maxWidth='xl'>
+			<Navbar
+				fixed='bottom'
+				style={{ backgroundImage: `url(${image})` }}
+			></Navbar>
 		</Container>
 	)
 }

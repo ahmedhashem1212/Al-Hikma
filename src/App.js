@@ -9,7 +9,7 @@ import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
 import Login from './components/Login.js'
 import Register from './components/Register.js'
-import Header from './components/Header'
+import Header from './components/Header.js'
 import Footer from './components/Footer'
 
 // function AppSwitch() {
@@ -19,7 +19,7 @@ import Footer from './components/Footer'
 
 function App() {
 	return (
-		<div style={{ top: '-220px' }}>
+		<div>
 			<BrowserRouter>
 				<Header />
 				<Switch>

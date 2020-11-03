@@ -14,6 +14,9 @@ import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
 
 import logo from '../Logo2.png'
+import logo1 from '../Eng.png'
+import logo2 from '../FR.png'
+import logo3 from '../EG.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 const useStyles = makeStyles((theme) => ({
@@ -44,7 +47,7 @@ function Header() {
 					<img src={logo} style={{ width: 220, marginTop: 0, padding: 0 }} />
 				</Navbar.Brand>
 
-				<Nav className='justify-content-end' style={{ paddingLeft: '53%' }}>
+				<Nav className='justify-content-end' style={{ paddingLeft: '42.5%' }}>
 					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
 						Home
 					</Nav.Link>
@@ -61,6 +64,42 @@ function Header() {
 						style={{ color: 'white' }}
 					>
 						Contact Us
+					</Nav.Link>
+					<Nav.Link id='nav-dropdown' href='ENG' style={{ color: 'white' }}>
+						{' '}
+						<img
+							src={logo1}
+							style={{
+								width: '25px',
+								height: '26px',
+								marginTop: 0,
+								padding: 0,
+							}}
+						/>
+					</Nav.Link>
+					<Nav.Link id='nav-dropdown' href='FR' style={{ color: 'white' }}>
+						{' '}
+						<img
+							src={logo2}
+							style={{
+								width: '30px',
+								height: '27.5px',
+								marginTop: 0,
+								padding: 0,
+							}}
+						/>
+					</Nav.Link>
+					<Nav.Link id='nav-dropdown' href='AR' style={{ color: 'white' }}>
+						{' '}
+						<img
+							src={logo3}
+							style={{
+								width: '26px',
+								height: '27px',
+								marginTop: 0,
+								padding: 0,
+							}}
+						/>
 					</Nav.Link>
 				</Nav>
 			</Navbar>

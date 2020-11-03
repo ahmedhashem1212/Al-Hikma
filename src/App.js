@@ -28,7 +28,7 @@ function App() {
 
 					<Route component={Register} />
 				</Switch>
-				<Footer/>
+				<Footer />
 			</BrowserRouter>
 		</div>
 	)

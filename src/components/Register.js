@@ -323,6 +323,7 @@ const Register = () => {
 									style={{
 										width: '95%',
 										padding: '0px 0px 0px 0px',
+										paddingBottom: '10px',
 									}}
 								>
 									<Card.Img

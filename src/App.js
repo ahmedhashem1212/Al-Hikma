@@ -7,6 +7,8 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import DateFnsUtils from '@date-io/date-fns'
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import Login from './components/Login.js'
 import Register from './components/Register.js'
 import Header from './components/Header.js'

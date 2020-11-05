@@ -31,7 +31,6 @@ const useStyles = makeStyles((theme) => ({
 		//#62A83D
 		opacity: '80%',
 		top: '0',
-		padding: '0.75rem 2rem',
 		left: '0',
 		zIndex: '1',
 		position: 'sticky',
@@ -73,9 +72,9 @@ function Header() {
 	const options = ['Home', 'Vegetables', 'Fruits', 'Calender']
 	const ITEM_HEIGHT = 48
 	return (
-		<Container maxWidth='xl' className={classes.backgroundContainer}>
+		<div className={classes.backgroundContainer}>
 			{matches ? (
-				<Navbar style={{ height: '45px' }}>
+				<Navbar style={{ height: '60px' }}>
 					<Navbar.Brand href='#home' style={{ color: 'white', width: '15%' }}>
 						<img src={logo} style={{ width: '220px' }} />
 					</Navbar.Brand>
@@ -183,7 +182,7 @@ function Header() {
 					</Nav>
 				</Navbar>
 			)}
-		</Container>
+		</div>
 	)
 }
 

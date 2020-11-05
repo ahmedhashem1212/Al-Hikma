@@ -11,7 +11,6 @@ import Button from 'react-bootstrap/Button'
 import NavDropdown from 'react-bootstrap/NavDropdown'
 import { COLORS } from './Colors'
 import fruits2 from '../assets/fruits2.jpg'
-
 import Container from '@material-ui/core/Container'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -31,88 +30,82 @@ function Footer() {
 	const classes = useStyles()
 	return (
 		<MDBFooter
-			color='indigo'
+			color='#14a109'
+			className='font-medium pt-4 mt-4'
 			style={{
-				marginTop: '10px',
 				background: '#14a109',
 				opacity: '80%',
 			}}
 		>
-			<MDBContainer>
-				<MDBRow className='pt-5 mb-3 text-center d-flex justify-content-center'>
-					<MDBCol md='2' className='b-3'>
-						<h6 className='title font-weight-bold'>
-							<a href='#!'>About us</a>
-						</h6>
+			<MDBContainer className='text-center text-md-left'>
+				<MDBRow className='text-center text-md-left mt-3 pb-3'>
+					<MDBCol
+						md='3'
+						lg='2'
+						xl='3'
+						className='mx-auto mt-3'
+						style={{ height: '200px' }}
+					>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
+						<p>
+							Al Hikma EG for export is a family business and Egyptian company
+							for exporting vegetables and fruits established in 1991. In fact,
+							our company aims to provide good quality oriented to valued
+							customers.
+						</p>
 					</MDBCol>
-					<MDBCol md='2' className='b-3'>
-						<h6 className='title font-weight-bold'>
-							<a href='#!'>Products</a>
-						</h6>
+					<hr className='w-100 clearfix d-md-none' />
+					<MDBCol md='2' lg='2' xl='2' className='mx-auto mt-3'>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>Products</h6>
+						<p>
+							<a href='#!'>Fruits</a>
+						</p>
+						<p>
+							<a href='#!'>Vegetables</a>
+						</p>
 					</MDBCol>
-					<MDBCol md='2' className='b-3'>
-						<h6 className='title font-weight-bold'>
-							<a href='#!'>Awards</a>
+					<hr className='w-100 clearfix d-md-none' />
+					<MDBCol md='3' lg='2' xl='2' className='mx-auto mt-3'>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>
+							Useful links
 						</h6>
+						<p>
+							<a href='#!'>Home</a>
+						</p>
+						<p>
+							<a href='#!'>Calender</a>
+						</p>
+						<p>
+							<a href='#!'>Contact us</a>
+						</p>
 					</MDBCol>
-					<MDBCol md='2' className='b-3'>
-						<h6 className='title font-weight-bold'>
-							<a href='#!'>Help</a>
-						</h6>
-					</MDBCol>
-					<MDBCol md='2' className='b-3'>
-						<h6 className='title font-weight-bold'>
-							<a href='#!'>Contact</a>
-						</h6>
+					<hr className='w-100 clearfix d-md-none' />
+					<MDBCol md='4' lg='3' xl='3' className='mx-auto mt-3'>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>Contact</h6>
+						<p>
+							<i className='fa fa-home mr-3' /> Sheraton Heliopolis- Egypt
+						</p>
+						<p>
+							<i className='fa fa-envelope mr-3' /> info@alhikmaeg.com
+						</p>
+						{/* <p>
+							<i className='fa fa-phone mr-3' /> + 01 234 567 88
+						</p>
+						<p>
+							<i className='fa fa-print mr-3' /> + 01 234 567 89
+						</p> */}
 					</MDBCol>
 				</MDBRow>
-				<hr className='rgba-white-light' style={{ margin: '0 15%' }} />
-				<MDBRow className='d-flex text-center justify-content-center mb-md-0 mb-4'>
-					<MDBCol md='8' sm='12' className='mt-5'>
-						<p style={{ lineHeight: '1.7rem' }}>
-							Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-							accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-							quae ab illo inventore veritatis et quasi architecto beatae vitae
-							dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
-							aspernatur aut odit aut fugit, sed quia consequuntur.
+				<hr />
+				<MDBRow className='d-flex align-items-center'>
+					<MDBCol md='8' lg='8'>
+						<p className='text-center text-md-left black-text'>
+							&copy; {new Date().getFullYear()} Copyright:{' '}
+							<a href='https://www.alhikmaeg.com'> alhikmaeg.com </a>
 						</p>
 					</MDBCol>
 				</MDBRow>
-				<hr
-					className='clearfix d-md-none rgba-white-light'
-					style={{ margin: '10% 15% 5%' }}
-				/>
-				<MDBRow className='pb-3'>
-					<MDBCol md='12'>
-						<div className='mb-5 flex-center'>
-							<a className='fb-ic'>
-								<i className='fab fa-facebook-f fa-lg white-text mr-md-4'> </i>
-							</a>
-							<a className='tw-ic'>
-								<i className='fab fa-twitter fa-lg white-text mr-md-4'> </i>
-							</a>
-							<a className='gplus-ic'>
-								<i className='fab fa-google-plus-g fa-lg white-text mr-md-4'></i>
-							</a>
-							<a className='li-ic'>
-								<i className='fab fa-linkedin-in fa-lg white-text mr-md-4'> </i>
-							</a>
-							<a className='ins-ic'>
-								<i className='fab fa-instagram fa-lg white-text mr-md-4'> </i>
-							</a>
-							<a className='pin-ic'>
-								<i className='fab fa-pinterest fa-lg white-text'> </i>
-							</a>
-						</div>
-					</MDBCol>
-				</MDBRow>
 			</MDBContainer>
-			<div className='footer-copyright text-center py-3'>
-				<MDBContainer fluid>
-					&copy; {new Date().getFullYear()} Copyright:
-					<a href='https://www.MDBootstrap.com'> MDBootstrap.com </a>
-				</MDBContainer>
-			</div>
 		</MDBFooter>
 	)
 }

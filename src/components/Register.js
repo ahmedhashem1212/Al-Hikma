@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react'
 
 import { Redirect, BrowserRouter, Route } from 'react-router-dom'
-import Header from './Header'
+import Header from './Header.js'
 import { COLORS } from './Colors'
 
 import Logo from '../Logo.png'
@@ -119,14 +119,6 @@ const Register = () => {
 			src: grapes,
 		},
 		{
-			name: 'Watermelons',
-			desc:
-				'Generally, watermelon has a high water content.  As far as fruits go, watermelon is one of the lowest in calories. The main exporting variety for the watermelon in Egypt is Skata.',
-			type: 'Skata',
-			Packing: 'carton 20 kg',
-			src: watermelons,
-		},
-		{
 			name: 'Lemons',
 			desc:
 				'Lemons are a type of yellow-skinned citrus fruits that grow on the lemon tree. All types of lemons are known for their acidic, sour taste with some varieties being sweeter than others. We are actually exporting the Egyptian lemon for many countries.',
@@ -237,7 +229,7 @@ const Register = () => {
 								paddingTop: '5rem',
 								paddingLeft: '15rem',
 								paddingRight: '10rem',
-								height: '85rem',
+
 								width: '100%',
 							}}
 						>
@@ -321,7 +313,7 @@ const Register = () => {
 							paddingTop: '5rem',
 							paddingLeft: '15rem',
 							paddingRight: '10rem',
-							height: '85rem',
+
 							width: '100%',
 						}}
 					>

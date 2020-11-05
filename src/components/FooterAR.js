@@ -31,59 +31,31 @@ function Footer() {
 	return (
 		<MDBFooter
 			color='#14a109'
-			className='font-medium pt-4 mt-4'
+			className='font-large pt-4 mt-4'
 			style={{
 				background: '#14a109',
 				//opacity: '80%',
 			}}
 		>
-			<MDBContainer className='text-center text-md-left'>
-				<MDBRow className='text-center text-md-left mt-3 pb-3'>
+			<MDBContainer
+				className='text-center text-md-left'
+				className='justify-content-end'
+			>
+				<MDBRow
+					className='text-center text-md-left mt-3 pb-3'
+					className='justify-content-end'
+				>
+					<hr className='w-100 clearfix d-md-none' />
 					<MDBCol
-						md='3'
-						lg='2'
+						md='4'
+						lg='3'
 						xl='3'
 						className='mx-auto mt-3'
-						style={{ height: '200px' }}
+						style={{ textAlign: 'right' }}
 					>
-						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>اتصل</h6>
 						<p>
-							Al Hikma EG for export is a family business and Egyptian company
-							for exporting vegetables and fruits established in 1991. In fact,
-							our company aims to provide good quality oriented to valued
-							customers.
-						</p>
-					</MDBCol>
-					<hr className='w-100 clearfix d-md-none' />
-					<MDBCol md='2' lg='2' xl='2' className='mx-auto mt-3'>
-						<h6 className='text-uppercase mb-4 font-weight-bold'>Products</h6>
-						<p>
-							<a href='#!'>Fruits</a>
-						</p>
-						<p>
-							<a href='#!'>Vegetables</a>
-						</p>
-					</MDBCol>
-					<hr className='w-100 clearfix d-md-none' />
-					<MDBCol md='3' lg='2' xl='2' className='mx-auto mt-3'>
-						<h6 className='text-uppercase mb-4 font-weight-bold'>
-							Useful links
-						</h6>
-						<p>
-							<a href='#!'>Home</a>
-						</p>
-						<p>
-							<a href='#!'>Calender</a>
-						</p>
-						<p>
-							<a href='#!'>Contact us</a>
-						</p>
-					</MDBCol>
-					<hr className='w-100 clearfix d-md-none' />
-					<MDBCol md='4' lg='3' xl='3' className='mx-auto mt-3'>
-						<h6 className='text-uppercase mb-4 font-weight-bold'>Contact</h6>
-						<p>
-							<i className='fa fa-home mr-3' /> Sheraton Heliopolis- Egypt
+							<i className='fa fa-home mr-3' /> شيراتون هليوبوليس - مصر
 						</p>
 						<p>
 							<i className='fa fa-envelope mr-3' /> info@alhikmaeg.com
@@ -94,6 +66,58 @@ function Footer() {
 						<p>
 							<i className='fa fa-print mr-3' /> + 01 234 567 89
 						</p> */}
+					</MDBCol>
+
+					<hr className='w-100 clearfix d-md-none' />
+					<MDBCol
+						md='3'
+						lg='2'
+						xl='2'
+						className='mx-auto mt-3'
+						style={{ textAlign: 'right' }}
+					>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>
+							روابط مفيدة
+						</h6>
+						<p>
+							<a href=''>الصفحة الرئيسية</a>
+						</p>
+						<p>
+							<a href='/calender'>الأجندة</a>
+						</p>
+						<p>
+							<a href='#contactus'>اتصل بنا</a>
+						</p>
+					</MDBCol>
+					<hr className='w-100 clearfix d-md-none' />
+					<MDBCol
+						md='2'
+						lg='2'
+						xl='2'
+						className='mx-auto mt-3'
+						style={{ textAlign: 'right' }}
+					>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>منتاجتنا</h6>
+						<p>
+							<a href='#!'>الفاكهة</a>
+						</p>
+						<p>
+							<a href='#!'>الخضراوات</a>
+						</p>
+					</MDBCol>
+					<MDBCol
+						md='3'
+						lg='2'
+						xl='3'
+						className='mx-auto mt-3'
+						style={{ textAlign: 'right' }}
+					>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>الحكمة </h6>
+						<p>
+							الحكمة اى جى للتصدير هي شركة عائلية لتصدير الخضار والفاكهة من أصل
+							مصري تأسست في عام 1991. في الواقع ، تهدف شركتنا إلى تقديم منتجات
+							عالية الجودة موجهة للعمللائنا المتميزين.
+						</p>
 					</MDBCol>
 				</MDBRow>
 				<hr />
@@ -106,7 +130,7 @@ function Footer() {
 								className='text-center text-md-left black-text'
 							>
 								{' '}
-								ALHIKMAEG.com{' '}
+								ALHIKMA.com{' '}
 							</a>
 						</p>
 					</MDBCol>

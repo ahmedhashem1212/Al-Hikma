@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 		position: 'sticky',
 	},
 }))
-function Footer() {
+function FooterFR() {
 	const classes = useStyles()
 	return (
 		<MDBFooter
@@ -44,14 +44,14 @@ function Footer() {
 						lg='2'
 						xl='3'
 						className='mx-auto mt-3'
-						style={{ height: '200px' }}
+						style={{ height: '230px' }}
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
 						<p>
-							Al Hikma EG for export is a family business and Egyptian company
-							for exporting vegetables and fruits established in 1991. In fact,
-							our company aims to provide good quality oriented to valued
-							customers.
+							Al Hikma EG for export est une compagnie familiale d’exportation
+							des légumes et fruits d’origine égyptienne établit en 1991. En
+							fait, notre compagnie a pour but de fournir une bonne qualité des
+							produits orientés aux clients précieux.
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
@@ -61,7 +61,7 @@ function Footer() {
 							<a href='#!'>Fruits</a>
 						</p>
 						<p>
-							<a href='#!'>Vegetables</a>
+							<a href='#!'>Légumes</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
@@ -70,20 +70,20 @@ function Footer() {
 							Useful links
 						</h6>
 						<p>
-							<a href='#!'>Home</a>
+							<a href='#!'>Domicile</a>
 						</p>
 						<p>
-							<a href='#!'>Calender</a>
+							<a href='#!'>Calendrier</a>
 						</p>
 						<p>
-							<a href='#!'>Contact us</a>
+							<a href='#!'>Contactez-nous</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
 					<MDBCol md='4' lg='3' xl='3' className='mx-auto mt-3'>
-						<h6 className='text-uppercase mb-4 font-weight-bold'>Contact</h6>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>Contactez</h6>
 						<p>
-							<i className='fa fa-home mr-3' /> Sheraton Heliopolis- Egypt
+							<i className='fa fa-home mr-3' /> Sheraton Heliopolis- Égypte
 						</p>
 						<p>
 							<i className='fa fa-envelope mr-3' /> info@alhikmaeg.com
@@ -106,7 +106,7 @@ function Footer() {
 								className='text-center text-md-left black-text'
 							>
 								{' '}
-								ALHIKMAEG.com{' '}
+								ALHIKMA.com{' '}
 							</a>
 						</p>
 					</MDBCol>
@@ -116,4 +116,4 @@ function Footer() {
 	)
 }
 
-export default Footer
+export default FooterFR

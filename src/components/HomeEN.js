@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   }
   ))	
 
-const Register = () => {
+const HomeEN = () => {
 	const theme = useTheme()
 	const matches = useMediaQuery(theme.breakpoints.up("md"))
 	const classes = useStyles()
@@ -423,4 +423,4 @@ padding:'0px 0px 0px 0px'
 	)
 }
 
-export default Register
+export default HomeEN

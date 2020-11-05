@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-function Header() {
+function HeaderAR() {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
   
@@ -77,15 +77,7 @@ function Header() {
 	  const ITEM_HEIGHT = 48;
 	return (
 		
-		<div  style={{background: '#14a109',
-		//#80C721
-		//#62A83D
-		opacity: '80%',
-		top: '0',
-		left: '0',
-		zIndex: '1',
-		position: 'sticky',
-		width:'100%'}}>
+		<Container maxWidth='xl' className={classes.backgroundContainer}>
 			{matches?(<Navbar>
 				<Navbar.Brand href='#home' style={{ color: 'white',width:'15%' }}>
 					<img src={logo} style={{    width: 200,marginLeft: "2%", }} />
@@ -93,21 +85,21 @@ function Header() {
 
 				<Nav className='justify-content-end' style={{ paddingLeft: '53%',width:'80%' }}>
 					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white'}}>
-						Home
+						الرئيسية
 					</Nav.Link>
-					<NavDropdown title={'Products'} id='nav-dropdown' >
-						<NavDropdown.Item href='#action/3.1'>Vegetables</NavDropdown.Item>
-						<NavDropdown.Item href='#action/3.2'>Fruits</NavDropdown.Item>
+					<NavDropdown title={'منتاجتنا'} id='nav-dropdown' >
+						<NavDropdown.Item href='#action/3.1'>الخضراوات</NavDropdown.Item>
+						<NavDropdown.Item href='#action/3.2'>الفاكهة</NavDropdown.Item>
 					</NavDropdown>
 					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
-						Calender
+						الأجندة
 					</Nav.Link>
 					<Nav.Link
 						id='nav-dropdown'
 						href='#contactus'
 						style={{ color: 'white'}}
 					>
-						Contact Us
+						اتصل بنا
 					</Nav.Link>
 				</Nav>
 			</Navbar>
@@ -152,8 +144,8 @@ function Header() {
 	  </Nav>
 </Navbar>
 )}
-					</div>
+					</Container>
 	)
 }
 
-export default Header
+export default HeaderAR

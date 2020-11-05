@@ -17,7 +17,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import logo from '../Logo2.jpg'
+import logo from '../Logo2.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 const useStyles = makeStyles((theme) => ({

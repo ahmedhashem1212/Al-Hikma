@@ -6,6 +6,8 @@ import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import DateFnsUtils from '@date-io/date-fns'
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+
 import Login from './components/Login.js'
 import HomeEN from './components/HomeEN.js'
 import HomeFR from './components/HomeFR.js'
@@ -24,9 +26,9 @@ import Footer from './components/Footer'
 
 function App() {
 	return (
-		<div >
+		<div>
 			<BrowserRouter>
-				{window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]==='ar'?(<HeaderAR/>):(window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]==='fr'?<HeaderFR/>:<Header/>)}
+				{window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]==='AR'?(<HeaderAR/>):(window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]==='FR'?<HeaderFR/>:<Header/>)}
 				<Switch>
 					<Route path='/en' component={HomeEN} />
 					<Route path='/fr' component={HomeFR} />
@@ -34,7 +36,7 @@ function App() {
 					
 					<Route component={FormPage} />
 				</Switch>
-				<Footer/>
+				<Footer />
 			</BrowserRouter>
 		</div>
 	)

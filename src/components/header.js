@@ -17,8 +17,11 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
-import logo from '../Logo2.jpg'
 
+import logo from '../Logo2.png'
+import logo1 from '../Eng.png'
+import logo2 from '../FR.png'
+import logo3 from '../EG.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 const useStyles = makeStyles((theme) => ({
 	backgroundContainer: {
@@ -27,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 		//#62A83D
 		opacity: '80%',
 		top: '0',
-		padding: '0.75rem 2rem',
+		
   		left: '0',
 		zIndex: '1',
 		position: 'sticky',
@@ -87,11 +90,11 @@ function Header() {
 		position: 'sticky',
 		width:'100%'}}>
 			{matches?(<Navbar>
-				<Navbar.Brand href='#home' style={{ color: 'white',width:'15%' }}>
+				<Navbar.Brand href='#home' style={{ color: 'white',width:'15%',height:'60px' }}>
 					<img src={logo} style={{    width: 200,marginLeft: "2%", }} />
 				</Navbar.Brand>
 
-				<Nav className='justify-content-end' style={{ paddingLeft: '53%',width:'80%' }}>
+				<Nav className='justify-content-end' style={{ paddingLeft: '30%',width:'80%' }}>
 					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white'}}>
 						Home
 					</Nav.Link>
@@ -109,6 +112,43 @@ function Header() {
 					>
 						Contact Us
 					</Nav.Link>
+					<Nav.Link id='nav-dropdown' href='ENG' style={{ color: 'white' }}>
+							{' '}
+							<img
+								src={logo1}
+								style={{
+									width: '25px',
+									height: '26px',
+									marginTop: 0,
+									padding: 0,
+								}}
+							/>
+						</Nav.Link>
+						<Nav.Link id='nav-dropdown' href='FR' style={{ color: 'white' }}>
+							{' '}
+							<img
+								src={logo2}
+								style={{
+									width: '30px',
+									height: '27.5px',
+									marginTop: 0,
+									padding: 0,
+								}}
+							/>
+						</Nav.Link>
+						<Nav.Link id='nav-dropdown' href='AR' style={{ color: 'white' }}>
+							{' '}
+							<img
+								src={logo3}
+								style={{
+									width: '26px',
+									height: '27px',
+									marginTop: 0,
+									padding: 0,
+								}}
+							/>
+						</Nav.Link>
+		
 				</Nav>
 			</Navbar>
 ):

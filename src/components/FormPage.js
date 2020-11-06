@@ -75,7 +75,7 @@ const FormPage = () => {
 										/>
 										<MDBBtn rounded color='green' style={{ color: 'white' }}>
 											<MDBIcon style={{ color: 'white' }} icon='paper-plane' />
-											{'  '} Send
+											{'   '} Send
 										</MDBBtn>
 									</div>
 								</MDBCol>

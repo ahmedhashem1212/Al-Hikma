@@ -164,11 +164,9 @@ function HeaderFR(props) {
                 }}
               />
             </Nav.Link>
-            <Nav.Link id="nav-dropdown" href="ar" style={{ color: 'white', width: '150px', marginTop: '0.5%' }}>
-              <h1 style={{ fontWeight: 'bold', fontSize: '15px', fontFamily: 'Lato' }}>
-                À propos de nous {'  '}
+            <Nav.Link id="nav-dropdown" href="ar" style={{ color: 'white'}}>
+              
                 <i class="fas fa-question" />
-              </h1>
             </Nav.Link>
           </Nav>
         </Navbar>

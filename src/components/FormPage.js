@@ -1,30 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreact'
 import 'mdbreact/dist/css/mdb.css'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 const FormPage = () => {
+  const [name,setName]=useState('')
+  const [email,setEmail]=useState('')
+  const [subject,setSubject]=useState('')
+  const [message,setMessage]=useState('')
+  const handleSubmit = async () => {
+    const fullMessage ={
+      name:name,
+      email:email,
+      subject:subject,
+      message:message
+    }
+    console.log(fullMessage)
+
+    /// andrew your code here
+    
+  }
   return (
     <div>
       <MDBContainer>
-        {/* <form>
-        <p className="h5 text-center mb-4">Write to us</p>
-        <div className="grey-text">
-          <MDBInput label="Your name" icon="user" group type="text" validate error="wrong"
-            success="right" />
-          <MDBInput label="Your email" icon="envelope" group type="email" validate error="wrong"
-            success="right" />
-          <MDBInput label="Subject" icon="tag" group type="text" validate error="wrong" success="right" />
-          <MDBInput type="textarea" rows="2" label="Your message" icon="pencil-alt" />
-        </div>
-        <div className="text-center">
-          <MDBBtn outline color="green">
-            Send
-            <MDBIcon far icon="paper-plane" className="ml-1" />
-          </MDBBtn>
-        </div>
-      </form> */}
-
         <h2 className="h1-responsive font-weight-bold text-center my-5">Contact us</h2>
         <div
           style={{
@@ -42,28 +40,38 @@ const FormPage = () => {
               <MDBRow>
                 <MDBCol md="6" style={{ width: '900px' }}>
                   <div className="md-form mb-0">
-                    <MDBInput type="text" id="contact-name" label="Your name" />
+                    <MDBInput type="text" id="contact-name" label="Your name"value={name} onChange={(e) => {
+								setName(e.target.value)
+							}} />
                   </div>
                 </MDBCol>
                 <MDBCol md="6">
                   <div className="md-form mb-0">
-                    <MDBInput type="text" id="contact-email" label="Your email" />
+                    <MDBInput type="text" id="contact-email" label="Your email" value={email} onChange={(e) => {
+								setEmail(e.target.value)
+							}}/>
                   </div>
                 </MDBCol>
               </MDBRow>
               <MDBRow>
                 <MDBCol md="12">
                   <div className="md-form mb-0">
-                    <MDBInput type="text" id="contact-subject" label="Subject" />
+                    <MDBInput type="text" id="contact-subject" label="Subject" value={subject} onChange={(e) => {
+								setSubject(e.target.value)
+							}}/>
                   </div>
                 </MDBCol>
               </MDBRow>
               <MDBRow style={{ marginBottom: '10%' }}>
                 <MDBCol md="12">
                   <div className="md-form mb-0">
-                    <MDBInput type="textarea" id="contact-message" label="Your message" />
+                    <MDBInput type="textarea" id="contact-message" label="Your message" value={message} onChange={(e) => {
+								setMessage(e.target.value)
+							}}/>
                     <MDBBtn rounded color="green" style={{ color: 'white' }}>
-                      <MDBIcon style={{ color: 'white', fontSize: '15px' }} icon="paper-plane">
+                      <MDBIcon style={{ color: 'white', fontSize: '15px' }} icon="paper-plane" onClick={() => {
+							handleSubmit()
+						}}>
                         {'   '} Send
                       </MDBIcon>
                     </MDBBtn>

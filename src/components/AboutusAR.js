@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'sticky',
   },
 }))
-function About() {
+function AboutAR() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('md'))
   const classes = useStyles()
@@ -40,10 +40,10 @@ function About() {
           <MDBCardImage cascade src="https://mdbootstrap.com/img/Photos/Slides/img%20(70).jpg" />
           <MDBCardBody cascade className="text-center">
             <MDBCardTitle>
-              <h1>Al Hikma EG</h1>
+              <h1>الحكمة اى جى</h1>
             </MDBCardTitle>
             <h5 className="indigo-text">
-              <strong style={{ color: '#14a109' }}>Who are we?</strong>
+              <strong style={{ color: '#14a109' }}>من نحن؟</strong>
             </h5>
             <div
               style={{
@@ -57,22 +57,20 @@ function About() {
             ></div>
             <MDBCardText>
               <p style={{ fontSize: '20px' }}>
-                Al Hikma EG for export is a family business and Egyptian company for exporting vegetables and fruits established in 1991. In fact, our company aims to provide good quality oriented to
-                valuable customers. The founder is very passionate in this field and has an excellent expertise in exporting to Europe and Gulf countries since he had worked in Switzerland for more
-                than 10 years as well as in Qatar for several years.
+                لحكمة اى جى للتصدير هي شركة عائلية لتصدير الخضار والفاكهة من أصل مصري تأسست في عام 1991. في الواقع ، تهدف شركتنا إلى تقديم منتجات عالية الجودة موجهة للعمللائنا المتميزين. مؤسس شركة
+                الحكمة شغوف جدًا بهذا المجال ولديه خبرة كبيرة في التصدير إلى أوروبا ودول الخليج حيث أنه عمل في سويسرا لأكثر من 10 سنوات وكذلك في قطر لعدة سنوات.
               </p>{' '}
               <p style={{ fontSize: '20px' }}>
-                We work in several vegetables and fruits: pomegranates, oranges Valencia, Green Beans, lettuce iceberg, artichoke, onions, potatoes Sponta, garlic, and watermelon, with respecting all
-                the quality procedures. Our merchandise is well selected and professionally packaged to satisfy our customers. Our market is mainly intended for Europe for example; France Belgium
-                Italy, Africa and Asia.{' '}
+                نحن نعمل في عدة خضروات وفواكه: رمان ، برتقال فالنسيا ، فاصوليا خضراء ، خس آيسبرغ ، خرشوف ، بصل ، بطاطس سبونتا ، ثوم ، بطيخ ، مع احترام جميع إجراءات الجو و كذلك يتم اختيار بضائعنا
+                بطريقة دقيقة وتعبئتها بشكل احترافي لإرضاء عملائنا الكرام. نصدر لعدة اسواق بشكل أساسي لأوروبا على سبيل المثال ؛ فرنسا بلجيكا وإيطاليا وأفريقيا وآسيا.{' '}
               </p>
               <p style={{ fontSize: '20px' }}>
                 {' '}
-                Our vision: For the future, we anticipate expanding our market and exporting Egyptian fruits and vegetables to the whole world and also attracting potential customers. Browsing our
-                site allows you to know our products in full details.
+                رؤيتنا : بالنسبة للمستقبل ، نامل توسيع سوقنا ونشر الفواكه والخضروات المصرية في جميع أنحاء العالم وكذلك جذب العملاء المحتملين. التصفح على موقعنا تيح لك التعرف على منتجاتنا بالتفصيل
+                الكامل.
               </p>
-              <p style={{ fontSize: '20px', alignContent: 'right', color: 'black', fontWeight: 'bold', marginLeft: '80%' }}> CEO Osman Mansour</p>
-              <p style={{ fontSize: '20px', alignContent: 'right', color: 'black', fontWeight: 'bold', marginLeft: '70%' }}> Marketing Manager Yasmina Osman</p>
+              <p style={{ fontSize: '20px', alignContent: 'right', color: 'black', fontWeight: 'bold', marginRight: '80%' }}> الرئيس التنفيذي عثمان منصور</p>
+              <p style={{ fontSize: '20px', alignContent: 'right', color: 'black', fontWeight: 'bold', marginRight: '82%' }}>مدير تسويق ياسمينة عثمان</p>
             </MDBCardText>
             <div
               style={{
@@ -94,4 +92,4 @@ function About() {
   )
 }
 
-export default About
+export default AboutAR

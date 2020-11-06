@@ -29,7 +29,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'sticky',
   },
 }))
-function About() {
+function AboutFR() {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('md'))
   const classes = useStyles()
@@ -43,7 +43,7 @@ function About() {
               <h1>Al Hikma EG</h1>
             </MDBCardTitle>
             <h5 className="indigo-text">
-              <strong style={{ color: '#14a109' }}>Who are we?</strong>
+              <strong style={{ color: '#14a109' }}>Qui sommes nous?</strong>
             </h5>
             <div
               style={{
@@ -57,22 +57,22 @@ function About() {
             ></div>
             <MDBCardText>
               <p style={{ fontSize: '20px' }}>
-                Al Hikma EG for export is a family business and Egyptian company for exporting vegetables and fruits established in 1991. In fact, our company aims to provide good quality oriented to
-                valuable customers. The founder is very passionate in this field and has an excellent expertise in exporting to Europe and Gulf countries since he had worked in Switzerland for more
-                than 10 years as well as in Qatar for several years.
+                Al Hikma EG for export est une compagnie familiale d’exportation des légumes et fruits d’origine égyptienne établit en 1991. En fait, notre compagnie a pour but de fournir une bonne
+                qualité des produits orientés aux clients précieux. Le fondateur est très passionné dans ce domaine et a une bonne expertise d’exportation à L’Europe et les pays du Golf puisqu’il
+                avait travaillé en Suisse pour plus que 10 ans ainsi à Qatar pour plusieurs année.
               </p>{' '}
               <p style={{ fontSize: '20px' }}>
-                We work in several vegetables and fruits: pomegranates, oranges Valencia, Green Beans, lettuce iceberg, artichoke, onions, potatoes Sponta, garlic, and watermelon, with respecting all
-                the quality procedures. Our merchandise is well selected and professionally packaged to satisfy our customers. Our market is mainly intended for Europe for example; France Belgium
-                Italy, Africa and Asia.{' '}
+                Nous travaillons dans plusieurs légumes et fruits : grenades, oranges Valencia, Green Beans, laitue iceberg, artichaut, oignons, pomme de terre Sponta, garlic, pastèque, en respectant
+                toutes les démarches qualités. Notre marchandise est bien sélectionnée et emballée d‘une manière professionnelle pour satisfaire nos clients. Notre marche est destinés principalement à
+                L’Europe par exemple ; France Belgique Italie, Afrique et L’Asie.{' '}
               </p>
               <p style={{ fontSize: '20px' }}>
                 {' '}
-                Our vision: For the future, we anticipate expanding our market and exporting Egyptian fruits and vegetables to the whole world and also attracting potential customers. Browsing our
-                site allows you to know our products in full details.
+                Notre vision : Pour le future, nous anticipons d’étendre notre marché et diffuser les fruits et les légumes égyptiens aux monde entier et attirant aussi les clients potentiels. La
+                navigation sur notre site vous permet de savoir nos produits avec tous détails.
               </p>
               <p style={{ fontSize: '20px', alignContent: 'right', color: 'black', fontWeight: 'bold', marginLeft: '80%' }}> CEO Osman Mansour</p>
-              <p style={{ fontSize: '20px', alignContent: 'right', color: 'black', fontWeight: 'bold', marginLeft: '70%' }}> Marketing Manager Yasmina Osman</p>
+              <p style={{ fontSize: '20px', alignContent: 'right', color: 'black', fontWeight: 'bold', marginLeft: '70%' }}> Responsable Marketing Yasmina Osman</p>
             </MDBCardText>
             <div
               style={{
@@ -94,4 +94,4 @@ function About() {
   )
 }
 
-export default About
+export default AboutFR

@@ -39,6 +39,7 @@ function App() {
   const [home, setHome] = useState(true)
   const [calender, setCalender] = useState(false)
   const [contact, setContact] = useState(false)
+  const [about, setAbout] = useState(false)
 
   const props = {
     executeScroll,
@@ -48,7 +49,8 @@ function App() {
     setHome,
     setCalender,
     setContact,
-    home,
+	home,
+	setAbout
   }
   return (
     <div>
@@ -61,7 +63,9 @@ function App() {
           <Redirect exact to={'/' + window.location.href[window.location.href.length - 2] + window.location.href[window.location.href.length - 1]} />
         ) : contact == true ? (
           <Redirect exact to={'/contact/' + window.location.href[window.location.href.length - 2] + window.location.href[window.location.href.length - 1]} />
-        ) : null}
+        ) : about == true ? (
+			<Redirect exact to={'/about/' + window.location.href[window.location.href.length - 2] + window.location.href[window.location.href.length - 1]} />
+		  ) : null}
         <Switch>
           <Route
             path="/"
@@ -74,7 +78,6 @@ function App() {
               </div>
             )}
           />
-          {console.log(myRef)}
           <Route
             path="/en"
             exact
@@ -176,10 +179,41 @@ function App() {
             )}
           />
         </Switch>
+		<Route
+            path="/about/ar"
+            exact
+            render={() => (
+              <div>
+                <HeaderAR {...props} />
+                <AboutAR {...props} />
+                <FooterAR {...props} />{' '}
+              </div>
+            )}
+          />
+          <Route
+            path="/about/en"
+            exact
+            render={() => (
+              <div>
+                <Header {...props} />
+                <About {...props} />
+                <Footer {...props} />{' '}
+              </div>
+            )}
+          />
+		  <Route
+            path="/about/fr"
+            exact
+            render={() => (
+              <div>
+                <HeaderFR {...props} />
+                <AboutFR {...props} />
+                <FooterFR {...props} />{' '}
+              </div>
+            )}
+          />
+        
 
-        {/* <Route   render={() => <div><Header {...props}/><HomeEN {...props} /><Footer /> </div>}/> */}
-
-        {/* <Footer /> */}
       </BrowserRouter>
     </div>
   )

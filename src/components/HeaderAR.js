@@ -95,6 +95,7 @@ function HeaderAR(props) {
               props.setHome(true)
               props.setCalender(false)
               props.setContact(false)
+              props.setAbout(false)
             }}
             style={{ color: 'white', width: '15%', height: '60px' }}
           >
@@ -108,6 +109,7 @@ function HeaderAR(props) {
                 props.setHome(true)
                 props.setCalender(false)
                 props.setContact(false)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -123,6 +125,7 @@ function HeaderAR(props) {
                 props.setHome(false)
                 props.setCalender(true)
                 props.setContact(false)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -134,6 +137,7 @@ function HeaderAR(props) {
                 props.setHome(false)
                 props.setCalender(false)
                 props.setContact(true)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -163,7 +167,12 @@ function HeaderAR(props) {
                 }}
               />
             </Nav.Link>
-            <Nav.Link id="nav-dropdown" href="ar" style={{ color: 'white', width: '100px', marginTop: '1%' }}>
+            <Nav.Link id="nav-dropdown" onClick={() => {
+                props.setHome(false)
+                props.setCalender(false)
+                props.setContact(false)
+                props.setAbout(true)
+              }} style={{ color: 'white', width: '100px', marginTop: '1%' }}>
               <h1 style={{ fontWeight: 'bold', fontSize: '15px', fontFamily: 'Lato' }}>
                 <i class="fas fa-question" style={{ transform: 'scaleX(-1)' }} /> معلومات عنا
               </h1>

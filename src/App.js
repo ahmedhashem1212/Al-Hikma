@@ -47,8 +47,8 @@ function App() {
 					<Route path='/fr' component={HomeFR} />
 					<Route path='/ar' component={HomeAR} />
 					<Route path='/calender' component={Calender} />
+					<Route path='/contact' component={FormPage} />
 					<Route component={HomeEN} />
-					<Route path='/contactus' component={FormPage} />
 				</Switch>
 				{window.location.href[window.location.href.length - 2] +
 					window.location.href[window.location.href.length - 1] ===

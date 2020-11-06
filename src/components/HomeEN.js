@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext, useEffect ,useRef} from 'react'
 
 import { Redirect, BrowserRouter, Route } from 'react-router-dom'
 import Header from './Header.js'
@@ -52,8 +52,10 @@ const useStyles = makeStyles((theme) => ({
 		marginLeft: '2%',
 	},
 }))
+	
+const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop) 
 
-const HomeEN = () => {
+const HomeEN = (props) => {
 	const theme = useTheme()
 	const matches = useMediaQuery(theme.breakpoints.up('md'))
 	const classes = useStyles()
@@ -198,13 +200,14 @@ const HomeEN = () => {
 						<div className='inner'>
 							<h1>{item.title}</h1>
 							<p>{item.description}</p>
-							<button>{item.button}</button>
+							<button onClick={props.executeScroll} >{item.button}</button>
 						</div>
 					</div>
 				))}
 			</Slider>
 			{matches ? (
-				<div>
+				<div ref={props.myRef}>
+				
 					<div>
 						<div>
 							<h1 style={{ paddingLeft: '15rem', paddingTop: '5rem' }}>
@@ -292,7 +295,7 @@ const HomeEN = () => {
 						</Grid>
 					</div>
 
-					<div>
+					<div ref={props.myRef2}>
 						<h1 style={{ paddingLeft: '230px', paddingTop: '5rem' }}>Fruits</h1>
 
 						<div

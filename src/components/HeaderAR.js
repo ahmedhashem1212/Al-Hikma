@@ -27,7 +27,6 @@ const useStyles = makeStyles((theme) => ({
 		//#62A83D
 		opacity: '80%',
 		top: '0',
-		padding: '0.75rem 2rem',
   		left: '0',
 		zIndex: '1',
 		position: 'sticky',
@@ -39,7 +38,6 @@ const useStyles = makeStyles((theme) => ({
 		//#62A83D
 		opacity: '80%',
 		top: '0',
-		padding: '0.75rem 2rem',
   		left: '0',
 		zIndex: '1',
 		position: 'sticky',
@@ -51,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-function HeaderAR() {
+function HeaderAR(props) {
 	const [anchorEl, setAnchorEl] = React.useState(null);
 	const open = Boolean(anchorEl);
   
@@ -77,8 +75,16 @@ function HeaderAR() {
 	  const ITEM_HEIGHT = 48;
 	return (
 		
-		<Container maxWidth='xl' className={classes.backgroundContainer}>
-			{matches?(<Navbar>
+		<div  style={{background: '#14a109',
+		//#80C721
+		//#62A83D
+		opacity: '80%',
+		top: '0',
+		left: '0',
+		zIndex: '1',
+		position: 'sticky',
+		width:'100%'}}>
+				{matches?(<Navbar>
 				<Navbar.Brand href='#home' style={{ color: 'white',width:'15%' }}>
 					<img src={logo} style={{    width: 200,marginLeft: "2%", }} />
 				</Navbar.Brand>
@@ -88,8 +94,8 @@ function HeaderAR() {
 						الرئيسية
 					</Nav.Link>
 					<NavDropdown title={'منتاجتنا'} id='nav-dropdown' >
-						<NavDropdown.Item href='#action/3.1'>الخضراوات</NavDropdown.Item>
-						<NavDropdown.Item href='#action/3.2'>الفاكهة</NavDropdown.Item>
+						<NavDropdown.Item onClick={props.executeScroll}>الخضراوات</NavDropdown.Item>
+						<NavDropdown.Item onClick={props.executeScroll2}>الفاكهة</NavDropdown.Item>
 					</NavDropdown>
 					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
 						الأجندة
@@ -144,7 +150,7 @@ function HeaderAR() {
 	  </Nav>
 </Navbar>
 )}
-					</Container>
+					</div>
 	)
 }
 

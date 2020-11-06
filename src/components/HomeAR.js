@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   }
   ))	
 
-const HomeAR = () => {
+const HomeAR = (props) => {
 	const theme = useTheme()
 	const matches = useMediaQuery(theme.breakpoints.up("md"))
 	const classes = useStyles()
@@ -196,7 +196,7 @@ const HomeAR = () => {
 					<div className="inner">
 						<h1>{item.title}</h1>
 						<p>{item.description}</p>
-						<button>{item.button}</button>
+						<button onClick={props.executeScroll}>{item.button}</button>
 					</div>
 					
 				</div>
@@ -206,7 +206,7 @@ const HomeAR = () => {
 		{matches?(	
 			<div> 
 			<div>
-			<div>
+			<div ref={props.myRef}>
 				<h1 style={{paddingRight:'15rem', paddingTop:'5rem', textAlign:'right'}}>الخضراوات</h1>
 				
 				<div style={{
@@ -259,7 +259,7 @@ const HomeAR = () => {
 </Grid>
 </div>
 
-<div>
+<div ref={props.myRef2}>
 <h1 style={{paddingRight:'15rem', paddingTop:'5rem', textAlign:'right'}}>الفاكهة</h1>
 				
 				<div style={{

@@ -63,7 +63,7 @@ function App() {
           <Redirect exact to={'/contact/' + window.location.href[window.location.href.length - 2] + window.location.href[window.location.href.length - 1]} />
         ) : null}
         <Switch>
-          <Route
+          {/* <Route
             path="/"
             exact
             render={() => (
@@ -73,8 +73,8 @@ function App() {
                 <Footer {...props} />{' '}
               </div>
             )}
-          />
-          {console.log(myRef)}
+          /> */}
+          {/* {console.log(myRef)} */}
           <Route
             path="/en"
             exact

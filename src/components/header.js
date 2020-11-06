@@ -70,6 +70,8 @@ function Header(props) {
     props.setHome(true)
     props.setCalender(false)
     props.setContact(false)
+    props.setAbout(false)
+    
   }
 
   const classes = useStyles()
@@ -99,6 +101,7 @@ function Header(props) {
               props.setHome(true)
               props.setCalender(false)
               props.setContact(false)
+              props.setAbout(false)
             }}
             style={{ color: 'white', width: '15%', height: '60px' }}
           >
@@ -112,6 +115,7 @@ function Header(props) {
                 props.setHome(true)
                 props.setCalender(false)
                 props.setContact(false)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -127,6 +131,7 @@ function Header(props) {
                 props.setCalender(true)
                 props.setContact(false)
                 props.setHome(false)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -139,6 +144,7 @@ function Header(props) {
                 props.setContact(true)
                 props.setCalender(false)
                 props.setHome(false)
+                props.setAbout(false)
               }}
             >
               Contact Us
@@ -168,8 +174,15 @@ function Header(props) {
                 }}
               />
             </Nav.Link>
-            <Nav.Link id="nav-dropdown" href="ar" style={{ color: 'white'}}>
-               <i class="fas fa-question" />
+            <Nav.Link id="nav-dropdown" onClick={() => {
+                props.setContact(false)
+                props.setCalender(false)
+                props.setHome(false)
+                props.setAbout(true)
+              }}
+             style={{ color: 'white'}}>
+                <i class="fas fa-question" />
+              
             </Nav.Link>
           </Nav>
         </Navbar>

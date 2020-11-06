@@ -96,6 +96,8 @@ function HeaderFR(props) {
               props.setHome(true)
               props.setCalender(false)
               props.setContact(false)
+              props.setContact(false)
+              props.setAbout(false)
             }}
             style={{ color: 'white', width: '15%', height: '60px' }}
           >
@@ -109,6 +111,7 @@ function HeaderFR(props) {
                 props.setHome(true)
                 props.setCalender(false)
                 props.setContact(false)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -124,6 +127,7 @@ function HeaderFR(props) {
                 props.setHome(false)
                 props.setCalender(true)
                 props.setContact(false)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -135,6 +139,7 @@ function HeaderFR(props) {
                 props.setHome(false)
                 props.setCalender(false)
                 props.setContact(true)
+                props.setAbout(false)
               }}
               style={{ color: 'white' }}
             >
@@ -164,7 +169,12 @@ function HeaderFR(props) {
                 }}
               />
             </Nav.Link>
-            <Nav.Link id="nav-dropdown" href="ar" style={{ color: 'white'}}>
+            <Nav.Link id="nav-dropdown"  onClick={() => {
+                props.setHome(false)
+                props.setCalender(false)
+                props.setContact(false)
+                props.setAbout(true)
+              }} style={{ color: 'white' }}>
               
                 <i class="fas fa-question" />
             </Nav.Link>

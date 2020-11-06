@@ -174,11 +174,9 @@ function HeaderFR(props) {
                 props.setCalender(false)
                 props.setContact(false)
                 props.setAbout(true)
-              }} style={{ color: 'white', width: '150px', marginTop: '0.5%' }}>
-              <h1 style={{ fontWeight: 'bold', fontSize: '15px', fontFamily: 'Lato' }}>
-                À propos de nous {'  '}
+              }} style={{ color: 'white' }}>
+              
                 <i class="fas fa-question" />
-              </h1>
             </Nav.Link>
           </Nav>
         </Navbar>

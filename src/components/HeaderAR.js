@@ -172,10 +172,8 @@ function HeaderAR(props) {
                 props.setCalender(false)
                 props.setContact(false)
                 props.setAbout(true)
-              }} style={{ color: 'white', width: '100px', marginTop: '1%' }}>
-              <h1 style={{ fontWeight: 'bold', fontSize: '15px', fontFamily: 'Lato' }}>
-                <i class="fas fa-question" style={{ transform: 'scaleX(-1)' }} /> معلومات عنا
-              </h1>
+              }} style={{ color: 'white' }}>
+                <i class="fas fa-question" style={{ transform: 'scaleX(-1)' }} /> 
             </Nav.Link>
           </Nav>
         </Navbar>

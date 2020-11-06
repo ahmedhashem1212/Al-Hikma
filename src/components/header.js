@@ -180,10 +180,9 @@ function Header(props) {
                 props.setHome(false)
                 props.setAbout(true)
               }}
-             style={{ color: 'white', width: '100px', marginTop: '0.5%' }}>
-              <h1 style={{ fontWeight: 'bold', fontSize: '15px', fontFamily: 'Lato' }}>
-                About us <i class="fas fa-question" />
-              </h1>
+             style={{ color: 'white'}}>
+                <i class="fas fa-question" />
+              
             </Nav.Link>
           </Nav>
         </Navbar>

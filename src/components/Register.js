@@ -53,119 +53,119 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-const HomeAR = (props) => {
+const Register = () => {
 	const theme = useTheme()
 	const matches = useMediaQuery(theme.breakpoints.up('md'))
 	const classes = useStyles()
 	const Veg = [
 		{
-			name: 'البطاطس',
+			name: 'Potatoes',
 			desc:
-				'البطاطس من المنتجات الطازجة التي تخصصت مصر في زراعتها وتعبئتها وتصديرها للعديد من المناطق في العالم بطاطس تقليدية جدًا ومعروفة ، ومناسبة للإنتاج في العديد من المناخات.بطاطس سبونتا ذات لحم أصفر ، وتصنع سلطات بطاطس رائعة. كما أنها رائعة على البخار أو مسلوقة',
-			type: 'سبونتا',
-			Packing: 'كيس أصفر 10/25 كجم',
+				'Potatoes is one of fresh products that Egypt specialized to grow, packing and export for many regions in the world. Spunta is a very conventional and well-known potato, suitable for production in many climates. Spunta potatoes are yellow fleshed, and make fantastic potato salads. They are also great steamed or boiled.',
+			type: 'Spunta',
+			Packing: 'yellow bag 10 /25 Kg',
 			src: potato,
 		},
 		{
-			name: 'Iceberg خس كابوتشا',
+			name: 'Iceberg lettuce (Capucha)',
 			desc:
-				'يحتوي على كميات صغيرة من العديد من العناصر الغذائية الصحية. يوفر الخس كميات كبيرة من الفيتامينات الاخرى. على الرغم من احتوائه على نسبة منخفضة من الألياف ، إلا أنه يحتوي على نسبة عالية من الماء ، مما يجعله خيارًا منعشًا أثناء الطقس الحار. كما أنه يوفر الكالسيوم والبوتاسيوم وفيتامين ج وحمض الفوليك',
-			type: 'Iceberg',
-			Packing: 'علبة كرتون - بلاستيك 7/8 كيلو',
+				'Iceberg lettuce provides significant amounts of vitamins A and K. It also has small amounts of many other healthy nutrients. Although it’s low in fiber, it has a high water content, making it a refreshing choice during hot weather. It also provides calcium, potassium, vitamin C, and folate.',
+			type: 'Iceberg lettuce ',
+			Packing: 'carton-plastic box 7/8 kg',
 			src: capucha,
 		},
 
 		{
-			name: 'الثوم',
+			name: 'Garlic',
 			desc:
-				'يعتبر الثوم في مصر منافسًا قويًا في السوق العالمية مقارنة بالدول الأخرى ، وقد بدأ تصديره إلى دول العالم ، كما يحتوي على بعض الألياف والفوسفور والبوتاسيوم والكالسيوم والحديد والنحاس ',
-			type: 'ثوم طازج',
-			Packing: 'كيس كرتون 5 كجم',
+				'In Egypt, garlic is strong competitive in the international market in compare with other countries.it has begun to be exported to countries worldwide, the Egyptian garlic is an excellent source of vitamins C and B6, selenium, and manganese, and also contains some fiber, phosphorus, potassium, calcium, iron, and copper. ',
+			type: 'fresh garlic',
+			Packing: 'carton-bag 5Kg',
 			src: garlic,
 		},
 		{
-			name: 'الفاصوليا الخضراء',
+			name: 'Green beans',
 			desc:
-				'تؤكل الفاصوليا الخضراء حول العالم وتباع طازجة ومجمدة. يمكن أن تؤكل نيئة أو مطبوخة على البخار أو مسلوقة أو مقلية أو مخبوزة. نقوم بتصدير الفاصوليا الخضراء المصرية لعدة دول بجودة وتعبئة جيدة',
-			type: 'فاصوليا خضراء طازجة',
-			Packing: 'كرتون 5/8 كجم',
+				'Green beans are eaten around the world, and are sold fresh and frozen. They can be eaten raw or steamed, boiled, stir-fried, or baked. We export the Egyptian green beans for several country with good quality and packing.',
+			type: 'Fresh green beans',
+			Packing: 'carton 5/8Kg',
 			src: beans,
 		},
 		{
-			name: 'البصل',
+			name: 'Onions',
 			desc:
-				'أحد أكبر ثلاث منتجات مصدرة من مصر للعديد من المناطق في العالم. لدينا البصل الأحمر والبصل البني',
-			type: 'بصل أحمر - بصل بني',
-			Packing: 'كيس أحمر 10/25 كجم',
+				'One of top three exporting products from Egypt, for many regions in the world. We have the red onions and brown onions.',
+			type: 'red onions-brown onions',
+			Packing: 'red bag 10 /25 Kg',
 			src: onion,
 		},
 
 		{
-			name: 'الأرضي شوكي',
+			name: 'Artichoke',
 			desc:
-				'يعتبر الأرضي شوكي منخفض الدهون وغني بالألياف والفيتامينات والمعادن ومضادات الأكسدة. تحتوي على نسبة عالية من حمض الفوليك والفيتامينات. كما أنها توفر المعادن المهمة ، مثل المغنيسيوم والفوسفور والبوتاسيوم والحديد. يحتوي الأرضي شوكي المصري على صنفين مشهورين: الأرضي شوكي المحلي والخرشوف الفرنسي',
-			type: 'الأرضي شوكي المحلي والخرشوف الفرنسي',
-			Packing: 'علبة بلاستيك - كرتون 4.5 / 5 كجم',
+				'Artichokes are rich in fiber, vitamins, minerals, and antioxidants. Particularly high in folate and vitamins C and K, they also supply important minerals, such as magnesium, phosphorus, potassium, and iron. The Egyptian artichoke has 2 famous varieties: the local artichoke and the French artichoke',
+			type: 'Local artichoke and the French artichoke ',
+			Packing: 'plastic box -carton 4.5/ 5 kg',
 			src: artichoke,
 		},
 	]
 	const Fruits = [
 		{
-			name: 'العنب',
+			name: 'Grapes',
 			desc:
-				'العنب مصدر جيد للألياف والبوتاسيوم ومجموعة من الفيتامينات والمعادن الأخرى. نقوم بتصدير 3 أصناف شهيرة  Flame و Superior و Crimson من العنب المصري ',
+				'Grapes are a good source of fiber, potassium, and a range of vitamins and other minerals. We export 3 famous varieties of the Egyptian grapes: Flame, Superior and Crimson.',
 			type: 'Flame-Superior-Crimson',
-			Packing: 'علبة بلاستيك - كرتون 5 كيلو',
+			Packing: 'plastic box -carton 5 kg',
 			src: grapes,
 		},
 		{
-			name: 'البطيخ',
+			name: 'Lemons',
 			desc:
-				'يحتوي البطيخ على نسبة عالية من الماء و يععد من أقل السعرات الحرارية. الصنف الرئيسي للبطيخ في مصر هو سكاتا',
-			type: 'Skata',
-			Packing: 'كرتون 20 كيلو',
-			src: watermelons,
-		},
-		{
-			name: 'الليمون',
-			desc:
-				'الليمون هو نوع من ثمار الحمضيات صفراء القشرة التي تنمو على شجرة الليمون. تشتهر جميع أنواع الليمون بمذاقها الحمضي الحامض مع بعض الأصناف التي تكون أكثر حلاوة من غيرها. نقوم بالفعل بتصدير الليمون المصري للعديد من الدول',
-			type: 'ليمون اضاليا',
-			Packing: 'علبة بلاستيك - كرتون 15 كيلو',
+				'Lemons are a type of yellow-skinned citrus fruits that grow on the lemon tree. All types of lemons are known for their acidic, sour taste with some varieties being sweeter than others. We are actually exporting the Egyptian lemon for many countries.',
+			type: 'Adalia Lemon',
+			Packing: 'plastic box -carton 15 kg',
 			src: lemon,
 		},
 
 		{
-			name: 'الرمان',
+			name: 'Pomegranate',
 			desc:
-				'الرمان من بين أكثر الفواكه صحة على وجه الأرض. أنها تحتوي على مجموعة من المركبات النباتية المفيدة ، لا مثيل لها. الرمان مصدر للألياف وفيتامين ب وفيتامين ج وفيتامين ك والبوتاسيوم',
+				'Pomegranates are among the healthiest fruits on Earth. They contain a range of beneficial plant compounds, unrivaled by other foods. Pomegranates are a source of fiber, B vitamins, vitamin C, vitamin K and potassium.',
 			type: 'Wonderful',
-			Packing: 'كرتون 4/5 كيلو',
+			Packing: 'carton 4/5 kg',
 			src: pomegranate,
 		},
 		{
-			name: 'البرتقال',
+			name: 'Watermelons',
 			desc:
-				'هناك العديد من أصناف البرتقال في السوق ولكن هناك صنفان يتصدران:  برتقال فالنسيا كثير العصير وله نسبة مثالية من نكهة التورتة الحلوة مما يجعله عصير البرتقال الرائع. السرة هي برتقال حلو ولذيذ وله نكهة أقل من برتقال فالنسيا. من الرائع تناول وجبة خفيفة ووضعها في سلطة لإضفاء نكهة حلوة ومنعشة',
-			type: 'فالنسيا-السرة',
-			Packing: 'كرتون 15 كيلو',
+				'Generally, watermelon has a high water content.  As far as fruits go, watermelon is one of the lowest in calories. The main exporting variety for the watermelon in Egypt is Skata.',
+			type: 'Skata',
+			Packing: 'carton 20 kg',
+			src: watermelons,
+		},
+		{
+			name: 'Oranges',
+			desc:
+				'There are many orange varieties in the market but there are two cultivars that top all the charts: the sweet snacking Navel Orange and the refreshingly juicy Valencia Orange. Valencia oranges are juicy and have the perfect ratio of sweet-tart flavor making them great juicing oranges. Navels are deliciously sweet oranges with less tang than Valencia oranges. They are wonderful to snack on and tossed in a salad to give a sweet and refreshing flavor.',
+			type: 'Valencia-Navel',
+			Packing: 'carton 15 kg',
 			src: orange,
 		},
 	]
 
 	const content = [
 		{
-			title: 'الحكمة اى جى للتصدير',
+			title: 'AL HIKMA For Export ',
 			description:
-				'هي شركة عائلية لتصدير الخضار والفاكهة من أصل مصري تأسست في عام 1991',
-			button: 'تفاصيل أكثر',
+				'Al Hikma EG for export is a family business and Egyptian company for exporting vegetables and fruits established in 1991',
+			button: 'Learn more',
 			image: fruits,
 		},
 		{
-			title: 'نعمل في العديد من انواع الخضراوات و الفاكهة',
+			title: 'Work In Several Vegetables and Fruits',
 			description:
-				' في الواقع تهدف شركتنا إلى تقديم منتجات عالية الجودة موجهة للعمللائنا المتميزين',
-			button: 'شاهد منتجاتنا',
+				'Our company aims to provide good quality oriented to valued customers',
+			button: 'See our Products',
 			image: fruits2,
 			user: 'Erich Behrens',
 			userProfile: 'https://i.imgur.com/0Clfnu7.png',
@@ -198,7 +198,7 @@ const HomeAR = (props) => {
 						<div className='inner'>
 							<h1>{item.title}</h1>
 							<p>{item.description}</p>
-							<button onClick={props.executeScroll}>{item.button}</button>
+							<button>{item.button}</button>
 						</div>
 					</div>
 				))}
@@ -206,15 +206,9 @@ const HomeAR = (props) => {
 			{matches ? (
 				<div>
 					<div>
-						<div ref={props.myRef}>
-							<h1
-								style={{
-									paddingRight: '15rem',
-									paddingTop: '5rem',
-									textAlign: 'right',
-								}}
-							>
-								الخضراوات
+						<div>
+							<h1 style={{ paddingLeft: '15rem', paddingTop: '5rem' }}>
+								Vegetables
 							</h1>
 
 							<div
@@ -222,8 +216,7 @@ const HomeAR = (props) => {
 									backgroundColor: '#4ed715',
 									height: '3px',
 									width: '50px',
-									marginRight: '15rem',
-									float: 'right',
+									marginLeft: '15rem',
 								}}
 							></div>
 						</div>
@@ -236,7 +229,7 @@ const HomeAR = (props) => {
 								paddingTop: '5rem',
 								paddingLeft: '15rem',
 								paddingRight: '10rem',
-								height: '85rem',
+
 								width: '100%',
 							}}
 						>
@@ -261,17 +254,12 @@ const HomeAR = (props) => {
 													color: 'black',
 													fontWeight: 'bold',
 													fontFamily: 'Trebuchet-MS',
-													textAlign: 'right',
 												}}
 											>
 												{item.name}
 											</Card.Title>
 											<Card.Text
-												style={{
-													color: 'black',
-													fontFamily: 'Trebuchet-MS',
-													textAlign: 'right',
-												}}
+												style={{ color: 'black', fontFamily: 'Trebuchet-MS' }}
 											>
 												{item.desc}
 											</Card.Text>
@@ -282,27 +270,21 @@ const HomeAR = (props) => {
 													fontSize: '20px',
 													color: 'green',
 													fontFamily: 'Trebuchet-MS',
-													textAlign: 'right',
 												}}
 											>
-												النوع
+												Type
 											</Card.Title>
-											<Card.Text style={{ textAlign: 'right' }}>
-												{item.type}
-											</Card.Text>
+											<Card.Text>{item.type}</Card.Text>
 											<Card.Title
 												style={{
 													fontSize: '20px',
 													color: 'green',
 													fontFamily: 'Raleway',
-													textAlign: 'right',
 												}}
 											>
-												التعبئة
+												Packing
 											</Card.Title>
-											<Card.Text style={{ textAlign: 'right' }}>
-												{item.Packing}
-											</Card.Text>
+											<Card.Text>{item.Packing}</Card.Text>
 										</Card.Footer>
 									</Card>
 								</Grid>
@@ -310,24 +292,15 @@ const HomeAR = (props) => {
 						</Grid>
 					</div>
 
-					<div ref={props.myRef2}>
-						<h1
-							style={{
-								paddingRight: '15rem',
-								paddingTop: '5rem',
-								textAlign: 'right',
-							}}
-						>
-							الفاكهة
-						</h1>
+					<div>
+						<h1 style={{ paddingLeft: '230px', paddingTop: '5rem' }}>Fruits</h1>
 
 						<div
 							style={{
 								backgroundColor: '#4ed715',
 								height: '3px',
 								width: '50px',
-								marginRight: '15rem',
-								float: 'right',
+								marginLeft: '230px',
 							}}
 						></div>
 					</div>
@@ -340,7 +313,7 @@ const HomeAR = (props) => {
 							paddingTop: '5rem',
 							paddingLeft: '15rem',
 							paddingRight: '10rem',
-							height: '85rem',
+
 							width: '100%',
 						}}
 					>
@@ -350,6 +323,7 @@ const HomeAR = (props) => {
 									style={{
 										width: '95%',
 										padding: '0px 0px 0px 0px',
+										paddingBottom: '10px',
 									}}
 								>
 									<Card.Img
@@ -365,17 +339,12 @@ const HomeAR = (props) => {
 												color: 'black',
 												fontWeight: 'bold',
 												fontFamily: 'Trebuchet-MS',
-												textAlign: 'right',
 											}}
 										>
 											{item.name}
 										</Card.Title>
 										<Card.Text
-											style={{
-												color: 'black',
-												fontFamily: 'Trebuchet-MS',
-												textAlign: 'right',
-											}}
+											style={{ color: 'black', fontFamily: 'Trebuchet-MS' }}
 										>
 											{item.desc}
 										</Card.Text>
@@ -386,27 +355,21 @@ const HomeAR = (props) => {
 												fontSize: '20px',
 												color: 'green',
 												fontFamily: 'Trebuchet-MS',
-												textAlign: 'right',
 											}}
 										>
-											النوع
+											Type
 										</Card.Title>
-										<Card.Text style={{ textAlign: 'right' }}>
-											{item.type}
-										</Card.Text>
+										<Card.Text>{item.type}</Card.Text>
 										<Card.Title
 											style={{
 												fontSize: '20px',
 												color: 'green',
 												fontFamily: 'Raleway',
-												textAlign: 'right',
 											}}
 										>
-											التعبئة
+											Packing
 										</Card.Title>
-										<Card.Text style={{ textAlign: 'right' }}>
-											{item.Packing}
-										</Card.Text>
+										<Card.Text>{item.Packing}</Card.Text>
 									</Card.Footer>
 								</Card>
 							</Grid>
@@ -588,4 +551,4 @@ const HomeAR = (props) => {
 	)
 }
 
-export default HomeAR
+export default Register

@@ -26,7 +26,13 @@ const useStyles = makeStyles((theme) => ({
 		position: 'sticky',
 	},
 }))
-function Footer() {
+function Footer(props) {
+	const homee =()=>{
+		props.setHome(true)
+						props.setCalender(false)
+						props.setContact(false)
+						
+	}
 	const classes = useStyles()
 	return (
 		<MDBFooter
@@ -53,7 +59,7 @@ function Footer() {
 						className='mx-auto mt-3'
 						style={{ textAlign: 'right' }}
 					>
-						<h6 className='text-uppercase mb-4 font-weight-bold'>اتصل</h6>
+						<h6 className='text-uppercase mb-4 font-weight-bold' >اتصل</h6>
 						<p>
 							<i className='fa fa-home mr-3' /> شيراتون هليوبوليس - مصر
 						</p>
@@ -80,13 +86,22 @@ function Footer() {
 							روابط مفيدة
 						</h6>
 						<p>
-							<a href=''>الصفحة الرئيسية</a>
+							<a onClick={() => {props.setHome(true)
+						props.setCalender(false)
+						props.setContact(false)
+					}}>الصفحة الرئيسية</a>
 						</p>
 						<p>
-							<a href='/calender'>الأجندة</a>
+							<a onClick={() => {props.setHome(false)
+						props.setCalender(true)
+						props.setContact(false)
+					}}>الأجندة</a>
 						</p>
 						<p>
-							<a href='#contactus'>اتصل بنا</a>
+							<a onClick={() => {props.setHome(false)
+						props.setCalender(false)
+						props.setContact(true)
+					}}>اتصل بنا</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
@@ -99,10 +114,10 @@ function Footer() {
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>منتاجتنا</h6>
 						<p>
-							<a href='#!'>الفاكهة</a>
+							<a onClick={props.home?props.executeScroll2:(homee)}>الفاكهة</a>
 						</p>
 						<p>
-							<a href='#!'>الخضراوات</a>
+							<a onClick={props.home?props.executeScroll:(homee)}>الخضراوات</a>
 						</p>
 					</MDBCol>
 					<MDBCol

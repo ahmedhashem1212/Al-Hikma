@@ -53,7 +53,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-function HeaderFR() {
+function HeaderFR(props) {
 	const [anchorEl, setAnchorEl] = React.useState(null)
 	const open = Boolean(anchorEl)
 
@@ -64,6 +64,11 @@ function HeaderFR() {
 	const handleClose = () => {
 		setAnchorEl(null)
 	}
+	const homee = () => {
+		props.setHome(true)
+		props.setCalender(false)
+		props.setContact(false)
+	}
 
 	const classes = useStyles()
 	const theme = useTheme()
@@ -71,11 +76,27 @@ function HeaderFR() {
 	const options = ['Home', 'Vegetables', 'Fruits', 'Calender']
 	const ITEM_HEIGHT = 48
 	return (
-		<div className={classes.backgroundContainer}>
+		<div
+			style={{
+				background: '#14a109',
+				//#80C721
+				//#62A83D
+				opacity: '80%',
+				top: '0',
+				left: '0',
+				zIndex: '1',
+				position: 'sticky',
+				width: '100%',
+			}}
+		>
 			{matches ? (
 				<Navbar>
 					<Navbar.Brand
-						href='#home'
+						onClick={() => {
+							props.setHome(true)
+							props.setCalender(false)
+							props.setContact(false)
+						}}
 						style={{ color: 'white', width: '15%', height: '60px' }}
 					>
 						<img src={logo} style={{ width: 200, marginLeft: '2%' }} />
@@ -83,26 +104,54 @@ function HeaderFR() {
 
 					<Nav
 						className='justify-content-end'
-						style={{ paddingLeft: '20%', width: '80%' }}
+						style={{ paddingLeft: '30%', width: '80%' }}
 					>
-						<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
+						<Nav.Link
+							id='nav-dropdown'
+							onClick={() => {
+								props.setHome(true)
+								props.setCalender(false)
+								props.setContact(false)
+							}}
+							style={{ color: 'white' }}
+						>
 							Domicile
 						</Nav.Link>
 						<NavDropdown title={'Produits'} id='nav-dropdown'>
-							<NavDropdown.Item href='#action/3.1'>Légumes</NavDropdown.Item>
-							<NavDropdown.Item href='#action/3.2'>Fruits</NavDropdown.Item>
+							<NavDropdown.Item
+								onClick={props.home ? props.executeScroll : homee}
+							>
+								Légumes
+							</NavDropdown.Item>
+							<NavDropdown.Item
+								onClick={props.home ? props.executeScroll2 : homee}
+							>
+								Fruits
+							</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
+						<Nav.Link
+							id='nav-dropdown'
+							onClick={() => {
+								props.setHome(false)
+								props.setCalender(true)
+								props.setContact(false)
+							}}
+							style={{ color: 'white' }}
+						>
 							Calendrier
 						</Nav.Link>
 						<Nav.Link
 							id='nav-dropdown'
-							href='#contactus'
+							onClick={() => {
+								props.setHome(false)
+								props.setCalender(false)
+								props.setContact(true)
+							}}
 							style={{ color: 'white' }}
 						>
 							Contactez-nous
 						</Nav.Link>
-						<Nav.Link id='nav-dropdown' href='ENG' style={{ color: 'white' }}>
+						<Nav.Link id='nav-dropdown' href='en' style={{ color: 'white' }}>
 							{' '}
 							<img
 								src={logo1}
@@ -114,7 +163,7 @@ function HeaderFR() {
 								}}
 							/>
 						</Nav.Link>
-						<Nav.Link id='nav-dropdown' href='AR' style={{ color: 'white' }}>
+						<Nav.Link id='nav-dropdown' href='ar' style={{ color: 'white' }}>
 							{' '}
 							<img
 								src={logo3}

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { NavLink, Link } from 'react-router-dom'
 import Navbar from 'react-bootstrap/Navbar'
@@ -17,6 +17,7 @@ import IconButton from '@material-ui/core/IconButton'
 import Menu from '@material-ui/core/Menu'
 import MenuItem from '@material-ui/core/MenuItem'
 import MoreVertIcon from '@material-ui/icons/MoreVert'
+import { Redirect } from 'react-router-dom'
 
 import logo from '../Logo2.png'
 import logo1 from '../Eng.png'
@@ -54,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 }))
 
-function Header() {
+function Header(props) {
 	const [anchorEl, setAnchorEl] = React.useState(null)
 	const open = Boolean(anchorEl)
 
@@ -65,19 +66,25 @@ function Header() {
 	const handleClose = () => {
 		setAnchorEl(null)
 	}
+	const homee = () => {
+		props.setHome(true)
+		props.setCalender(false)
+		props.setContact(false)
+	}
 
 	const classes = useStyles()
 	const theme = useTheme()
 	const matches = useMediaQuery(theme.breakpoints.up('md'))
 	const options = ['Home', 'Vegetables', 'Fruits', 'Calender']
 	const ITEM_HEIGHT = 48
+
 	return (
 		<div
 			style={{
 				background: '#14a109',
 				//#80C721
 				//#62A83D
-				//opacity: '80%',
+				opacity: '80%',
 				top: '0',
 				left: '0',
 				zIndex: '1',
@@ -88,7 +95,11 @@ function Header() {
 			{matches ? (
 				<Navbar>
 					<Navbar.Brand
-						href='#home'
+						onClick={() => {
+							props.setHome(true)
+							props.setCalender(false)
+							props.setContact(false)
+						}}
 						style={{ color: 'white', width: '15%', height: '60px' }}
 					>
 						<img src={logo} style={{ width: 200, marginLeft: '2%' }} />
@@ -98,24 +109,53 @@ function Header() {
 						className='justify-content-end'
 						style={{ paddingLeft: '30%', width: '80%' }}
 					>
-						<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
+						<Nav.Link
+							id='nav-dropdown'
+							onClick={() => {
+								props.setHome(true)
+								props.setCalender(false)
+								props.setContact(false)
+							}}
+							style={{ color: 'white' }}
+						>
 							Home
 						</Nav.Link>
 						<NavDropdown title={'Products'} id='nav-dropdown'>
-							<NavDropdown.Item href='#action/3.1'>Vegetables</NavDropdown.Item>
-							<NavDropdown.Item href='#action/3.2'>Fruits</NavDropdown.Item>
+							<NavDropdown.Item
+								onClick={props.home ? props.executeScroll : homee}
+							>
+								Vegetables
+							</NavDropdown.Item>
+							<NavDropdown.Item
+								onClick={props.home ? props.executeScroll2 : homee}
+							>
+								Fruits
+							</NavDropdown.Item>
 						</NavDropdown>
-						<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
+						<Nav.Link
+							id='nav-dropdown'
+							onClick={() => {
+								props.setCalender(true)
+								props.setContact(false)
+								props.setHome(false)
+							}}
+							style={{ color: 'white' }}
+						>
 							Calender
 						</Nav.Link>
 						<Nav.Link
 							id='nav-dropdown'
-							href='#contactus'
 							style={{ color: 'white' }}
+							onClick={() => {
+								props.setContact(true)
+								props.setCalender(false)
+								props.setHome(false)
+							}}
 						>
 							Contact Us
 						</Nav.Link>
-						<Nav.Link id='nav-dropdown' href='FR' style={{ color: 'white' }}>
+
+						<Nav.Link id='nav-dropdown' href='fr' style={{ color: 'white' }}>
 							{' '}
 							<img
 								src={logo2}
@@ -127,7 +167,7 @@ function Header() {
 								}}
 							/>
 						</Nav.Link>
-						<Nav.Link id='nav-dropdown' href='AR' style={{ color: 'white' }}>
+						<Nav.Link id='nav-dropdown' href='ar' style={{ color: 'white' }}>
 							{' '}
 							<img
 								src={logo3}

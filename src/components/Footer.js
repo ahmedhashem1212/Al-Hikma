@@ -26,8 +26,14 @@ const useStyles = makeStyles((theme) => ({
 		position: 'sticky',
 	},
 }))
-function Footer() {
+function Footer(props) {
 	const classes = useStyles()
+	const homee =()=>{
+		props.setHome(true)
+						props.setCalender(false)
+						props.setContact(false)
+						
+	}
 	return (
 		<MDBFooter
 			color='#14a109'
@@ -58,10 +64,11 @@ function Footer() {
 					<MDBCol md='2' lg='2' xl='2' className='mx-auto mt-3'>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Products</h6>
 						<p>
-							<a href='#!'>Fruits</a>
+							<a onClick={props.home?props.executeScroll2:(homee)}>Fruits</a>
 						</p>
 						<p>
-							<a href='#!'>Vegetables</a>
+							{console.log(props.home)}
+							<a onClick={props.home?props.executeScroll:(homee)}>Vegetables</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
@@ -70,13 +77,24 @@ function Footer() {
 							Useful links
 						</h6>
 						<p>
-							<a href='#!'>Home</a>
+							<a onClick={() => {props.setHome(true)
+						props.setCalender(false)
+						props.setContact(false)
+					}}>Home</a>
 						</p>
 						<p>
-							<a href='#!'>Calender</a>
+							<a onClick={() => {props.setCalender(true)
+						props.setContact(false)
+						props.setHome(false)
+					}}>Calender</a>
 						</p>
 						<p>
-							<a href='#!'>Contact us</a>
+							<a onClick={() => {
+							props.setContact(true)
+							props.setCalender(false)
+							props.setHome(false)
+						
+						}}>Contact us</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />

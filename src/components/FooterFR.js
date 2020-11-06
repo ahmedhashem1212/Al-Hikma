@@ -26,14 +26,14 @@ const useStyles = makeStyles((theme) => ({
 		position: 'sticky',
 	},
 }))
-function Footer(props) {
-	const classes = useStyles()
+function FooterFR(props) {
 	const homee =()=>{
 		props.setHome(true)
 						props.setCalender(false)
 						props.setContact(false)
 						
 	}
+	const classes = useStyles()
 	return (
 		<MDBFooter
 			color='#14a109'
@@ -50,14 +50,14 @@ function Footer(props) {
 						lg='2'
 						xl='3'
 						className='mx-auto mt-3'
-						style={{ height: '200px' }}
+						style={{ height: '230px' }}
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
 						<p>
-							Al Hikma EG for export is a family business and Egyptian company
-							for exporting vegetables and fruits established in 1991. In fact,
-							our company aims to provide good quality oriented to valued
-							customers.
+							Al Hikma EG for export est une compagnie familiale d’exportation
+							des légumes et fruits d’origine égyptienne établit en 1991. En
+							fait, notre compagnie a pour but de fournir une bonne qualité des
+							produits orientés aux clients précieux.
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
@@ -67,8 +67,7 @@ function Footer(props) {
 							<a onClick={props.home?props.executeScroll2:(homee)}>Fruits</a>
 						</p>
 						<p>
-							{console.log(props.home)}
-							<a onClick={props.home?props.executeScroll:(homee)}>Vegetables</a>
+							<a onClick={props.home?props.executeScroll:(homee)}>Légumes</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
@@ -80,28 +79,26 @@ function Footer(props) {
 							<a onClick={() => {props.setHome(true)
 						props.setCalender(false)
 						props.setContact(false)
-					}}>Home</a>
+					}}>Domicile</a>
 						</p>
 						<p>
-							<a onClick={() => {props.setCalender(true)
+							<a onClick={() => {props.setHome(false)
+						props.setCalender(true)
 						props.setContact(false)
-						props.setHome(false)
-					}}>Calender</a>
+					}}>Calendrier</a>
 						</p>
 						<p>
-							<a onClick={() => {
-							props.setContact(true)
-							props.setCalender(false)
-							props.setHome(false)
-						
-						}}>Contact us</a>
+							<a onClick={() => {props.setHome(false)
+						props.setCalender(false)
+						props.setContact(true)
+					}}>Contactez-nous</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
 					<MDBCol md='4' lg='3' xl='3' className='mx-auto mt-3'>
-						<h6 className='text-uppercase mb-4 font-weight-bold'>Contact</h6>
+						<h6 className='text-uppercase mb-4 font-weight-bold'>Contactez</h6>
 						<p>
-							<i className='fa fa-home mr-3' /> Sheraton Heliopolis- Egypt
+							<i className='fa fa-home mr-3' /> Sheraton Heliopolis- Égypte
 						</p>
 						<p>
 							<i className='fa fa-envelope mr-3' /> info@alhikmaeg.com
@@ -124,7 +121,7 @@ function Footer(props) {
 								className='text-center text-md-left black-text'
 							>
 								{' '}
-								ALHIKMAEG.com{' '}
+								ALHIKMA.com{' '}
 							</a>
 						</p>
 					</MDBCol>
@@ -134,4 +131,4 @@ function Footer(props) {
 	)
 }
 
-export default Footer
+export default FooterFR

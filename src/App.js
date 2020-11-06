@@ -8,7 +8,6 @@ import { Redirect } from 'react-router-dom'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import Login from './components/Login.js'
 import HomeEN from './components/HomeEN.js'
 import HomeFR from './components/HomeFR.js'
 import HomeAR from './components/HomeAR.js'
@@ -18,6 +17,9 @@ import HeaderFR from './components/HeaderFR'
 import HeaderAR from './components/HeaderAR'
 import FormPage from './components/FormPage'
 import Footer from './components/Footer'
+import FooterFR from './components/FooterFR'
+import FooterAR from './components/FooterAR'
+import Calender from './components/Calender'
 
 // function AppSwitch() {
 //   // const { user } = useContext(AuthenticationContext)
@@ -31,7 +33,7 @@ function App() {
 
 	const executeScroll = () => scrollToRef(myRef)
 	const executeScroll2 = () => scrollToRef(myRef2)
-	const [home,setHome] = useState(false)
+	const [home,setHome] = useState(true)
 	const [calender,setCalender] = useState(false)
 	const [contact,setContact] = useState(false)
 	
@@ -42,27 +44,34 @@ function App() {
 		myRef2,
 		setHome,
 		setCalender,
-		setContact
+		setContact, home
 	}
 	return (
 		<div>
 			<BrowserRouter id='current'>
 				{/* {window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]==='ar'?(<HeaderAR {...props}/>):(window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]==='fr'?<HeaderFR {...props}/>:<Header {...props}/>)} */}
 				
-					{calender==true ? <Redirect exact to={'/calender/'+window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]} />  :(home==true ? <Redirect exact to={'/home/'+window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]} />:(contact==true ? <Redirect exact to={'/contact/'+window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]} />:(null)))}
+					{calender==true ? <Redirect exact to={'/calender/'+window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]} />  :(home==true ? <Redirect exact to={'/'+window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]} />:(contact==true ? <Redirect exact to={'/contact/'+window.location.href[window.location.href.length-2]+window.location.href[window.location.href.length-1]} />:(null)))}
 						<Switch>
 					
-						
-						<Route path='/home/en' exact render={() => <div><Header {...props}/><HomeEN {...props} /><Footer /> </div>}/>
-					<Route path='/home/fr' exact render={() => <div><HeaderFR {...props}/><HomeFR {...props} /><Footer /> </div> } />
-					<Route path='/home/ar' exact render={() => <div><HeaderAR {...props}/><HomeAR {...props} /><Footer /> </div> } />
-					<Route path='/contact/en' exact render={() => <div><Header {...props}/><FormPage {...props} /><Footer /> </div>} />
+					<Route path='/' exact render={() => <div><Header {...props}/><HomeEN {...props} /><Footer {...props}/> </div>}/>
+						{console.log(myRef)}
+					<Route path='/en' exact render={() => <div><Header {...props}/><HomeEN {...props} /><Footer {...props}/> </div>}/>
+					<Route path='/fr' exact render={() => <div><HeaderFR {...props}/><HomeFR {...props} /><FooterFR {...props}/> </div> } />
+					<Route path='/ar' exact render={() => <div><HeaderAR {...props}/><HomeAR {...props} /><FooterAR {...props}/> </div> } />
+					<Route path='/contact/en' exact render={() => <div><Header {...props}/><FormPage {...props} /><Footer {...props}/> </div>} />
+					<Route path='/contact/fr' exact render={() => <div><HeaderFR {...props}/><FormPage {...props} /><FooterFR {...props}/> </div>} />
+					<Route path='/contact/ar' exact render={() => <div><HeaderAR {...props}/><FormPage {...props} /><FooterAR {...props}/> </div>} />
+					
+					<Route path='/calender/en' exact render={() => <div><Header {...props}/><Calender {...props} /><Footer {...props}/> </div>} />
+					<Route path='/calender/fr' exact render={() => <div><HeaderFR {...props}/><Calender {...props} /><FooterFR {...props}/> </div>} />
+					<Route path='/calender/ar' exact render={() => <div><HeaderAR {...props}/><Calender {...props} /><FooterAR  {...props}/> </div>} />
+					
 					</Switch>
 				
 
-
-					{/* <Route component={HomeEN} /> */}
-				
+					{/* <Route   render={() => <div><Header {...props}/><HomeEN {...props} /><Footer /> </div>}/> */}
+					
 				{/* <Footer /> */}
 			</BrowserRouter>
 		</div>

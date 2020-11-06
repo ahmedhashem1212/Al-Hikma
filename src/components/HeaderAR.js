@@ -18,6 +18,9 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import logo from '../Logo2.png'
+import logo1 from '../Eng.png'
+import logo2 from '../FR.png'
+import logo3 from '../EG.png'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 		background: '#14a109',
 		//#80C721
 		//#62A83D
-		opacity: '80%',
+		// opacity: '80%',
 		top: '0',
   		left: '0',
 		zIndex: '1',
@@ -36,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 		background: '#14a109',
 		//#80C721
 		//#62A83D
-		opacity: '80%',
+		// opacity: '80%',
 		top: '0',
   		left: '0',
 		zIndex: '1',
@@ -73,6 +76,12 @@ function HeaderAR(props) {
 		
 	  ];
 	  const ITEM_HEIGHT = 48;
+	  const homee =()=>{
+		props.setHome(true)
+						props.setCalender(false)
+						props.setContact(false)
+						
+	}
 	return (
 		
 		<div  style={{background: '#14a109',
@@ -85,28 +94,65 @@ function HeaderAR(props) {
 		position: 'sticky',
 		width:'100%'}}>
 				{matches?(<Navbar>
-				<Navbar.Brand href='#home' style={{ color: 'white',width:'15%' }}>
+				<Navbar.Brand onClick={() => {props.setHome(true)
+						props.setCalender(false)
+						props.setContact(false)
+					}} style={{ color: 'white',width:'15%',height:'60px'  }}>
 					<img src={logo} style={{    width: 200,marginLeft: "2%", }} />
 				</Navbar.Brand>
 
 				<Nav className='justify-content-end' style={{ paddingLeft: '53%',width:'80%' }}>
-					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white'}}>
+					<Nav.Link id='nav-dropdown'onClick={() => {props.setHome(true)
+						props.setCalender(false)
+						props.setContact(false)
+					}} style={{ color: 'white'}}>
 						الرئيسية
 					</Nav.Link>
 					<NavDropdown title={'منتاجتنا'} id='nav-dropdown' >
-						<NavDropdown.Item onClick={props.executeScroll}>الخضراوات</NavDropdown.Item>
-						<NavDropdown.Item onClick={props.executeScroll2}>الفاكهة</NavDropdown.Item>
+						<NavDropdown.Item onClick={props.home?props.executeScroll:(homee)}>الخضراوات</NavDropdown.Item>
+						<NavDropdown.Item onClick={props.home?props.executeScroll2:(homee)}>الفاكهة</NavDropdown.Item>
 					</NavDropdown>
-					<Nav.Link id='nav-dropdown' href='#home' style={{ color: 'white' }}>
+					<Nav.Link id='nav-dropdown' onClick={() => {props.setHome(false)
+						props.setCalender(true)
+						props.setContact(false)
+					}} style={{ color: 'white' }}>
 						الأجندة
 					</Nav.Link>
 					<Nav.Link
 						id='nav-dropdown'
-						href='#contactus'
+						onClick={() => {props.setHome(false)
+							props.setCalender(false)
+							props.setContact(true)
+						}}
 						style={{ color: 'white'}}
 					>
 						اتصل بنا
 					</Nav.Link>
+					<Nav.Link id='nav-dropdown' href='en' style={{ color: 'white' }}>
+							{' '}
+							<img
+								src={logo1}
+								style={{
+									width: '25px',
+									height: '26px',
+									marginTop: 0,
+									padding: 0,
+								}}
+							/>
+						</Nav.Link>
+						<Nav.Link id='nav-dropdown' href='fr' style={{ color: 'white' }}>
+							{' '}
+							<img
+								src={logo2}
+								style={{
+									width: '30px',
+									height: '27.5px',
+									marginTop: 0,
+									padding: 0,
+								}}
+							/>
+						</Nav.Link>
+					
 				</Nav>
 			</Navbar>
 ):
@@ -151,6 +197,7 @@ function HeaderAR(props) {
 </Navbar>
 )}
 					</div>
+					
 	)
 }
 

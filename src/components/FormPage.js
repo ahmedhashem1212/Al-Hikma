@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
+import nodemailer from 'nodemailer-react';
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from 'mdbreact'
 import 'mdbreact/dist/css/mdb.css'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+
+
 const FormPage = () => {
   const [name,setName]=useState('')
   const [email,setEmail]=useState('')
@@ -16,10 +19,14 @@ const FormPage = () => {
       message:message
     }
     console.log(fullMessage)
-
-    /// andrew your code here
-    
+    window.emailjs.send('gmail',
+        'template_25evq0p',
+          {subject:fullMessage.subject,from_name:fullMessage.name,email:fullMessage.email,message:fullMessage.message},'user_4JzcHgNROI2pAXMv78Dpc'
+      ).then(res => {
+       console.log('Email successfully sent!')
+     })
   }
+
   return (
     <div>
       <MDBContainer>

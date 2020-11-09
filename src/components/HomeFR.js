@@ -31,6 +31,19 @@ import fruits from '../assets/fruits.jpg'
 import fruits2 from '../assets/fruits2.jpg'
 import { useTheme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+
+import {
+	MDBBtn,
+	MDBCard,
+	MDBCardBody,
+	MDBCardImage,
+	MDBCardTitle,
+	MDBCardText,
+	MDBRow,
+	MDBCol,
+	MDBView,
+	MDBIcon,
+} from 'mdbreact'
 const useStyles = makeStyles((theme) => ({
 	backgroundContainer: {
 		background: COLORS.brightBlack,
@@ -63,15 +76,15 @@ const HomeFR = (props) => {
 			desc:
 				"Les pommes de terre sont l'un des produits frais que l'Égypte s'est spécialisée dans la culture, le conditionnement et l'exportation dans de nombreuses régions du monde. La Spunta est une pomme de terre très conventionnelle et bien connue, adaptée à la production sous de nombreux climats.",
 			type: 'Spunta',
-			Packing: 'sac jaune 10/25 Kg',
+			Packing: 'Sac jaune 10/25 Kg',
 			src: potato,
 		},
 		{
 			name: 'Laitue Iceberg (Capucha)',
 			desc:
 				'La laitue iceberg fournit des quantités importantes de vitamines A et K. Elle contient également de petites quantités de nombreux autres nutriments sains. Il fournit également du calcium, du potassium, de la vitamine C et du folate.',
-			type: 'laitue iceberg',
-			Packing: 'boîte carton-plastique 7/8 kg',
+			type: 'Laitue iceberg',
+			Packing: 'Boîte carton-plastique 7/8 kg',
 			src: capucha,
 		},
 
@@ -79,8 +92,8 @@ const HomeFR = (props) => {
 			name: 'Ail',
 			desc:
 				"En Egypte, l'ail est très compétitif sur le marché international par rapport aux autres pays. Il a commencé à être exporté vers les pays du monde entier, l'ail égyptien est une excellente source de vitamines C et B6, de sélénium et de manganèse, et contient également des fibres, phosphore, potassium, calcium, fer et cuivre.",
-			type: 'ail frais',
-			Packing: 'carton-sac 5Kg',
+			type: 'Ail frais',
+			Packing: 'Carton-sac 5Kg',
 			src: garlic,
 		},
 		{
@@ -88,7 +101,7 @@ const HomeFR = (props) => {
 			desc:
 				'Les haricots verts sont consommés dans le monde entier et vendus frais. Ils peuvent être consommés crus ou cuits à la vapeur, bouillis, sautés ou cuits au four. Nous exportons les haricots verts égyptiens pour plusieurs pays avec une bonne qualité et emballage.',
 			type: 'Haricots verts frais',
-			Packing: 'carton 5/8Kg',
+			Packing: 'Carton 5/8Kg',
 			src: beans,
 		},
 		{
@@ -96,7 +109,7 @@ const HomeFR = (props) => {
 			desc:
 				"L'un des trois principaux produits exportateurs d'Égypte, pour de nombreuses régions du monde. Nous avons les oignons rouges et les oignons bruns.",
 			type: 'oignons rouges-oignons bruns',
-			Packing: 'sac rouge 10/25 Kg',
+			Packing: 'Sac rouge 10/25 Kg',
 			src: onion,
 		},
 
@@ -105,7 +118,7 @@ const HomeFR = (props) => {
 			desc:
 				"Les artichauts sont riches en fibres, vitamines, minéraux et antioxydants. Particulièrement riches en acide folique et en vitamines C et K, ils fournissent également des minéraux importants, tels que le magnésium, le phosphore, le potassium et le fer. L'artichaut égyptien a 2 variétés célèbres: l'artichaut local et l'artichaut français",
 			type: "l'artichaut local et l'artichaut français",
-			Packing: 'boîte en plastique -carton 4,5 / 5 kg',
+			Packing: 'Boîte en plastique -carton 4,5 / 5 kg',
 			src: artichoke,
 		},
 	]
@@ -123,7 +136,7 @@ const HomeFR = (props) => {
 			desc:
 				"Généralement, la pastèque a une teneur élevée en eau et est l'une des plus faibles en calories. La principale variété de pastèque en Égypte est Skata.",
 			type: 'Skata',
-			Packing: 'carton 20 kg',
+			Packing: 'Carton 20 kg',
 			src: watermelons,
 		},
 		{
@@ -131,7 +144,7 @@ const HomeFR = (props) => {
 			desc:
 				"Les citrons sont un type d'agrumes à peau jaune qui poussent sur le citronnier. Tous les types de citrons sont connus pour leur goût acide et acidulé, certaines variétés étant plus sucrées que d'autres. En fait, nous exportons actuellement le citron égyptien pour de nombreux pays.",
 			type: 'Citron Adalia',
-			Packing: 'plastic box -carton 15 kg',
+			Packing: 'Plastic box -carton 15 kg',
 			src: lemon,
 		},
 
@@ -140,7 +153,7 @@ const HomeFR = (props) => {
 			desc:
 				'Les grenades sont parmi les fruits les plus sains au monde. Les grenades sont une source de fibres, de vitamines B, de vitamine C, de vitamine K et de potassium.',
 			type: 'Wonderful',
-			Packing: 'carton 4/5 kg',
+			Packing: 'Carton 4/5 kg',
 			src: pomegranate,
 		},
 		{
@@ -148,7 +161,7 @@ const HomeFR = (props) => {
 			desc:
 				"Il existe de nombreuses variétés d'oranges sur le marché .Les oranges Valencia sont juteuses et ont le rapport parfait de saveur sucrée-acidulée, ce qui en fait d'excellentes oranges à jus. Les navels sont des oranges délicieusement douces avec moins de piquant que les oranges de Valence. Ils sont merveilleux à mélanger dans une salade pour donner une saveur douce et rafraîchissante.",
 			type: 'Valence-Navel',
-			Packing: 'carton 15 kg',
+			Packing: 'Carton 15 kg',
 			src: orange,
 		},
 	]
@@ -235,7 +248,56 @@ const HomeFR = (props) => {
 						>
 							{Veg.map((item) => (
 								<Grid item xs={4}>
-									<Card
+									<MDBCard
+										style={{
+											width: '95%',
+											padding: '0px 0px 0px 0px',
+											marginBottom: '2%',
+										}}
+									>
+										<MDBCardImage
+											top
+											src={item.src}
+											overlay='white-slight'
+											hover
+											waves
+											alt='MDBCard image cap'
+											style={{
+												height: '200px',
+											}}
+										/>
+										<MDBCardBody>
+											<a
+												href='#!'
+												className='activator waves-effect waves-light mr-4'
+											></a>
+											<MDBCardTitle>{item.name}</MDBCardTitle>
+											<hr />
+											<MDBCardText>{item.desc}</MDBCardText>
+											<hr />
+											<h5 className='indigo-text'>
+												<medium
+													style={{ fontSize: '17.5px', color: '#14a109' }}
+												>
+													Type: {'  '}
+												</medium>
+												<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+													{item.type}
+												</h7>
+											</h5>
+											<h5 className='indigo-text'>
+												<medium
+													style={{ fontSize: '17.5px', color: '#14a109' }}
+												>
+													Emballage: {'  '}
+												</medium>
+												<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+													{item.Packing}
+												</h7>
+											</h5>
+										</MDBCardBody>
+									</MDBCard>
+									{/* <Card
 										style={{
 											width: '95%',
 											padding: '0px 0px 0px 0px',
@@ -286,7 +348,7 @@ const HomeFR = (props) => {
 											</Card.Title>
 											<Card.Text>{item.Packing}</Card.Text>
 										</Card.Footer>
-									</Card>
+									</Card> */}
 								</Grid>
 							))}
 						</Grid>
@@ -319,7 +381,52 @@ const HomeFR = (props) => {
 					>
 						{Fruits.map((item) => (
 							<Grid item xs={4} spacing={5}>
-								<Card
+								<MDBCard
+									style={{
+										width: '95%',
+										padding: '0px 0px 0px 0px',
+										marginBottom: '2%',
+									}}
+								>
+									<MDBCardImage
+										top
+										src={item.src}
+										overlay='white-slight'
+										hover
+										waves
+										alt='MDBCard image cap'
+										style={{
+											height: '200px',
+										}}
+									/>
+									<MDBCardBody>
+										<a
+											href='#!'
+											className='activator waves-effect waves-light mr-4'
+										></a>
+										<MDBCardTitle>{item.name}</MDBCardTitle>
+										<hr />
+										<MDBCardText>{item.desc}</MDBCardText>
+										<hr />
+										<h5 className='indigo-text'>
+											<medium style={{ fontSize: '17.5px', color: '#14a109' }}>
+												Type: {'  '}
+											</medium>
+											<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+												{item.type}
+											</h7>
+										</h5>
+										<h5 className='indigo-text'>
+											<medium style={{ fontSize: '17.5px', color: '#14a109' }}>
+												Emballage: {'  '}
+											</medium>
+											<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+												{item.Packing}
+											</h7>
+										</h5>
+									</MDBCardBody>
+								</MDBCard>
+								{/* <Card
 									style={{
 										width: '95%',
 										padding: '0px 0px 0px 0px',
@@ -369,11 +476,12 @@ const HomeFR = (props) => {
 											Emballage
 										</Card.Title>
 										<Card.Text>{item.Packing}</Card.Text>
-									</Card.Footer>
-								</Card>
+									</Card.Footer> */}
+								{/* </Card> */}
 							</Grid>
 						))}
 					</Grid>
+					<div style={{ height: '45px' }}> </div>
 				</div>
 			) : (
 				<div>
@@ -385,7 +493,7 @@ const HomeFR = (props) => {
 								fontSize: '25px',
 							}}
 						>
-							Vegetables
+							Légumes{' '}
 						</h1>
 
 						<div
@@ -406,57 +514,51 @@ const HomeFR = (props) => {
 					>
 						{Veg.map((item) => (
 							<Grid item xs={100}>
-								<Card
+								<MDBCard
 									style={{
+										width: '95%',
 										padding: '0px 0px 0px 0px',
+										marginBottom: '2%',
 									}}
 								>
-									<Card.Img
-										variant='top'
+									<MDBCardImage
+										top
 										src={item.src}
+										overlay='white-slight'
+										hover
+										waves
+										alt='MDBCard image cap'
 										style={{
 											height: '200px',
 										}}
 									/>
-									<Card.Body style={{}}>
-										<Card.Title
-											style={{
-												color: 'black',
-												fontWeight: 'bold',
-												fontFamily: 'Trebuchet-MS',
-											}}
-										>
-											{item.name}
-										</Card.Title>
-										<Card.Text
-											style={{ color: 'black', fontFamily: 'Trebuchet-MS' }}
-										>
-											{item.desc}
-										</Card.Text>
-									</Card.Body>
-									<Card.Footer>
-										<Card.Title
-											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Trebuchet-MS',
-											}}
-										>
-											Type
-										</Card.Title>
-										<Card.Text>{item.type}</Card.Text>
-										<Card.Title
-											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Raleway',
-											}}
-										>
-											Packing
-										</Card.Title>
-										<Card.Text>{item.Packing}</Card.Text>
-									</Card.Footer>
-								</Card>
+									<MDBCardBody>
+										<a
+											href='#!'
+											className='activator waves-effect waves-light mr-4'
+										></a>
+										<MDBCardTitle>{item.name}</MDBCardTitle>
+										<hr />
+										<MDBCardText>{item.desc}</MDBCardText>
+										<hr />
+										<h5 className='indigo-text'>
+											<medium style={{ fontSize: '17.5px', color: '#14a109' }}>
+												Type: {'  '}
+											</medium>
+											<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+												{item.type}
+											</h7>
+										</h5>
+										<h5 className='indigo-text'>
+											<medium style={{ fontSize: '17.5px', color: '#14a109' }}>
+												Emballage: {'  '}
+											</medium>
+											<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+												{item.Packing}
+											</h7>
+										</h5>
+									</MDBCardBody>
+								</MDBCard>
 							</Grid>
 						))}
 					</Grid>
@@ -490,57 +592,51 @@ const HomeFR = (props) => {
 					>
 						{Fruits.map((item) => (
 							<Grid item xs={100}>
-								<Card
+								<MDBCard
 									style={{
+										width: '95%',
 										padding: '0px 0px 0px 0px',
+										marginBottom: '2%',
 									}}
 								>
-									<Card.Img
-										variant='top'
+									<MDBCardImage
+										top
 										src={item.src}
+										overlay='white-slight'
+										hover
+										waves
+										alt='MDBCard image cap'
 										style={{
 											height: '200px',
 										}}
 									/>
-									<Card.Body>
-										<Card.Title
-											style={{
-												color: 'black',
-												fontWeight: 'bold',
-												fontFamily: 'Trebuchet-MS',
-											}}
-										>
-											{item.name}
-										</Card.Title>
-										<Card.Text
-											style={{ color: 'black', fontFamily: 'Trebuchet-MS' }}
-										>
-											{item.desc}
-										</Card.Text>
-									</Card.Body>
-									<Card.Footer>
-										<Card.Title
-											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Trebuchet-MS',
-											}}
-										>
-											Type
-										</Card.Title>
-										<Card.Text>{item.type}</Card.Text>
-										<Card.Title
-											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Raleway',
-											}}
-										>
-											Packing
-										</Card.Title>
-										<Card.Text>{item.Packing}</Card.Text>
-									</Card.Footer>
-								</Card>
+									<MDBCardBody>
+										<a
+											href='#!'
+											className='activator waves-effect waves-light mr-4'
+										></a>
+										<MDBCardTitle>{item.name}</MDBCardTitle>
+										<hr />
+										<MDBCardText>{item.desc}</MDBCardText>
+										<hr />
+										<h5 className='indigo-text'>
+											<medium style={{ fontSize: '17.5px', color: '#14a109' }}>
+												Type: {'  '}
+											</medium>
+											<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+												{item.type}
+											</h7>
+										</h5>
+										<h5 className='indigo-text'>
+											<medium style={{ fontSize: '17.5px', color: '#14a109' }}>
+												Emballage: {'  '}
+											</medium>
+											<h7 style={{ fontSize: '17.5px', color: '#000000' }}>
+												{item.Packing}
+											</h7>
+										</h5>
+									</MDBCardBody>
+								</MDBCard>
 							</Grid>
 						))}
 					</Grid>

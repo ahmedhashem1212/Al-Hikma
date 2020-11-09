@@ -31,6 +31,19 @@ import fruits from '../assets/fruits.jpg'
 import fruits2 from '../assets/fruits2.jpg'
 import { useTheme } from '@material-ui/core/styles'
 import Typography from '@material-ui/core/Typography'
+
+import {
+	MDBBtn,
+	MDBCard,
+	MDBCardBody,
+	MDBCardImage,
+	MDBCardTitle,
+	MDBCardText,
+	MDBRow,
+	MDBCol,
+	MDBView,
+	MDBIcon,
+} from 'mdbreact'
 const useStyles = makeStyles((theme) => ({
 	backgroundContainer: {
 		background: COLORS.brightBlack,
@@ -242,7 +255,90 @@ const HomeAR = (props) => {
 						>
 							{Veg.map((item) => (
 								<Grid item xs={4}>
-									<Card
+									<MDBCard
+										style={{
+											width: '95%',
+											padding: '0px 0px 0px 0px',
+											marginBottom: '2%',
+										}}
+									>
+										<MDBCardImage
+											top
+											src={item.src}
+											overlay='white-slight'
+											hover
+											waves
+											alt='MDBCard image cap'
+											style={{
+												height: '200px',
+											}}
+										/>
+										<MDBCardBody>
+											<a
+												href='#!'
+												className='activator waves-effect waves-light mr-4'
+											></a>
+											<MDBCardTitle style={{ textAlign: 'right' }}>
+												{item.name}
+											</MDBCardTitle>
+											<hr />
+											<MDBCardText style={{ textAlign: 'right' }}>
+												{item.desc}
+											</MDBCardText>
+											<hr />
+											<h5
+												className='indigo-text'
+												style={{
+													textAlign: 'right',
+												}}
+											>
+												<medium
+													style={{
+														textAlign: 'right',
+														fontSize: '17.5px',
+														color: '#14a109',
+													}}
+												>
+													النوع :{'  '}
+												</medium>
+												<h7
+													style={{
+														textAlign: 'right',
+														fontSize: '17.5px',
+														color: '#000000',
+													}}
+												>
+													{item.type}
+												</h7>
+											</h5>
+											<h5
+												className='indigo-text'
+												style={{
+													textAlign: 'right',
+												}}
+											>
+												<medium
+													style={{
+														textAlign: 'right',
+														fontSize: '17.5px',
+														color: '#14a109',
+													}}
+												>
+													التعبئة :{'  '}
+												</medium>
+												<h7
+													style={{
+														textAlign: 'right',
+														fontSize: '17.5px',
+														color: '#000000',
+													}}
+												>
+													{item.Packing}
+												</h7>
+											</h5>
+										</MDBCardBody>
+									</MDBCard>
+									{/* <Card
 										style={{
 											width: '95%',
 											padding: '0px 0px 0px 0px',
@@ -304,7 +400,7 @@ const HomeAR = (props) => {
 												{item.Packing}
 											</Card.Text>
 										</Card.Footer>
-									</Card>
+									</Card> */}
 								</Grid>
 							))}
 						</Grid>
@@ -346,7 +442,90 @@ const HomeAR = (props) => {
 					>
 						{Fruits.map((item) => (
 							<Grid item xs={4} spacing={5}>
-								<Card
+								<MDBCard
+									style={{
+										width: '95%',
+										padding: '0px 0px 0px 0px',
+										marginBottom: '2%',
+									}}
+								>
+									<MDBCardImage
+										top
+										src={item.src}
+										overlay='white-slight'
+										hover
+										waves
+										alt='MDBCard image cap'
+										style={{
+											height: '200px',
+										}}
+									/>
+									<MDBCardBody>
+										<a
+											href='#!'
+											className='activator waves-effect waves-light mr-4'
+										></a>
+										<MDBCardTitle style={{ textAlign: 'right' }}>
+											{item.name}
+										</MDBCardTitle>
+										<hr />
+										<MDBCardText style={{ textAlign: 'right' }}>
+											{item.desc}
+										</MDBCardText>
+										<hr />
+										<h5
+											className='indigo-text'
+											style={{
+												textAlign: 'right',
+											}}
+										>
+											<medium
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#14a109',
+												}}
+											>
+												النوع :{'  '}
+											</medium>
+											<h7
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#000000',
+												}}
+											>
+												{item.type}
+											</h7>
+										</h5>
+										<h5
+											className='indigo-text'
+											style={{
+												textAlign: 'right',
+											}}
+										>
+											<medium
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#14a109',
+												}}
+											>
+												التعبئة :{'  '}
+											</medium>
+											<h7
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#000000',
+												}}
+											>
+												{item.Packing}
+											</h7>
+										</h5>
+									</MDBCardBody>
+								</MDBCard>
+								{/* <Card
 									style={{
 										width: '95%',
 										padding: '0px 0px 0px 0px',
@@ -408,7 +587,7 @@ const HomeAR = (props) => {
 											{item.Packing}
 										</Card.Text>
 									</Card.Footer>
-								</Card>
+								</Card> */}
 							</Grid>
 						))}
 					</Grid>
@@ -418,12 +597,13 @@ const HomeAR = (props) => {
 					<div>
 						<h1
 							style={{
-								paddingLeft: '2rem',
+								paddingRight: '2rem',
 								paddingTop: '5rem',
 								fontSize: '25px',
+								textAlign: 'right',
 							}}
 						>
-							Vegetables
+							الخضراوات
 						</h1>
 
 						<div
@@ -431,7 +611,7 @@ const HomeAR = (props) => {
 								backgroundColor: '#4ed715',
 								height: '3px',
 								width: '50px',
-								marginLeft: '2.5rem',
+								marginLeft: '70%',
 							}}
 						></div>
 					</div>
@@ -444,57 +624,89 @@ const HomeAR = (props) => {
 					>
 						{Veg.map((item) => (
 							<Grid item xs={100}>
-								<Card
+								<MDBCard
 									style={{
+										width: '95%',
 										padding: '0px 0px 0px 0px',
+										marginBottom: '2%',
 									}}
 								>
-									<Card.Img
-										variant='top'
+									<MDBCardImage
+										top
 										src={item.src}
+										overlay='white-slight'
+										hover
+										waves
+										alt='MDBCard image cap'
 										style={{
 											height: '200px',
 										}}
 									/>
-									<Card.Body style={{}}>
-										<Card.Title
-											style={{
-												color: 'black',
-												fontWeight: 'bold',
-												fontFamily: 'Trebuchet-MS',
-											}}
-										>
+									<MDBCardBody>
+										<a
+											href='#!'
+											className='activator waves-effect waves-light mr-4'
+										></a>
+										<MDBCardTitle style={{ textAlign: 'right' }}>
 											{item.name}
-										</Card.Title>
-										<Card.Text
-											style={{ color: 'black', fontFamily: 'Trebuchet-MS' }}
-										>
+										</MDBCardTitle>
+										<hr />
+										<MDBCardText style={{ textAlign: 'right' }}>
 											{item.desc}
-										</Card.Text>
-									</Card.Body>
-									<Card.Footer>
-										<Card.Title
+										</MDBCardText>
+										<hr />
+										<h5
+											className='indigo-text'
 											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Trebuchet-MS',
+												textAlign: 'right',
 											}}
 										>
-											Type
-										</Card.Title>
-										<Card.Text>{item.type}</Card.Text>
-										<Card.Title
+											<medium
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#14a109',
+												}}
+											>
+												النوع :{'  '}
+											</medium>
+											<h7
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#000000',
+												}}
+											>
+												{item.type}
+											</h7>
+										</h5>
+										<h5
+											className='indigo-text'
 											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Raleway',
+												textAlign: 'right',
 											}}
 										>
-											Packing
-										</Card.Title>
-										<Card.Text>{item.Packing}</Card.Text>
-									</Card.Footer>
-								</Card>
+											<medium
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#14a109',
+												}}
+											>
+												التعبئة :{'  '}
+											</medium>
+											<h7
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#000000',
+												}}
+											>
+												{item.Packing}
+											</h7>
+										</h5>
+									</MDBCardBody>
+								</MDBCard>
 							</Grid>
 						))}
 					</Grid>
@@ -502,12 +714,13 @@ const HomeAR = (props) => {
 					<div>
 						<h1
 							style={{
-								paddingLeft: '2rem',
+								paddingRight: '2rem',
 								paddingTop: '5rem',
 								fontSize: '25px',
+								textAlign: 'right',
 							}}
 						>
-							Fruits
+							الفاكهة
 						</h1>
 
 						<div
@@ -528,57 +741,89 @@ const HomeAR = (props) => {
 					>
 						{Fruits.map((item) => (
 							<Grid item xs={100}>
-								<Card
+								<MDBCard
 									style={{
+										width: '95%',
 										padding: '0px 0px 0px 0px',
+										marginBottom: '2%',
 									}}
 								>
-									<Card.Img
-										variant='top'
+									<MDBCardImage
+										top
 										src={item.src}
+										overlay='white-slight'
+										hover
+										waves
+										alt='MDBCard image cap'
 										style={{
 											height: '200px',
 										}}
 									/>
-									<Card.Body>
-										<Card.Title
-											style={{
-												color: 'black',
-												fontWeight: 'bold',
-												fontFamily: 'Trebuchet-MS',
-											}}
-										>
+									<MDBCardBody>
+										<a
+											href='#!'
+											className='activator waves-effect waves-light mr-4'
+										></a>
+										<MDBCardTitle style={{ textAlign: 'right' }}>
 											{item.name}
-										</Card.Title>
-										<Card.Text
-											style={{ color: 'black', fontFamily: 'Trebuchet-MS' }}
-										>
+										</MDBCardTitle>
+										<hr />
+										<MDBCardText style={{ textAlign: 'right' }}>
 											{item.desc}
-										</Card.Text>
-									</Card.Body>
-									<Card.Footer>
-										<Card.Title
+										</MDBCardText>
+										<hr />
+										<h5
+											className='indigo-text'
 											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Trebuchet-MS',
+												textAlign: 'right',
 											}}
 										>
-											Type
-										</Card.Title>
-										<Card.Text>{item.type}</Card.Text>
-										<Card.Title
+											<medium
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#14a109',
+												}}
+											>
+												النوع :{'  '}
+											</medium>
+											<h7
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#000000',
+												}}
+											>
+												{item.type}
+											</h7>
+										</h5>
+										<h5
+											className='indigo-text'
 											style={{
-												fontSize: '20px',
-												color: 'green',
-												fontFamily: 'Raleway',
+												textAlign: 'right',
 											}}
 										>
-											Packing
-										</Card.Title>
-										<Card.Text>{item.Packing}</Card.Text>
-									</Card.Footer>
-								</Card>
+											<medium
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#14a109',
+												}}
+											>
+												التعبئة :{'  '}
+											</medium>
+											<h7
+												style={{
+													textAlign: 'right',
+													fontSize: '17.5px',
+													color: '#000000',
+												}}
+											>
+												{item.Packing}
+											</h7>
+										</h5>
+									</MDBCardBody>
+								</MDBCard>
 							</Grid>
 						))}
 					</Grid>

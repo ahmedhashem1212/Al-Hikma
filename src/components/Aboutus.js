@@ -48,7 +48,7 @@ function About() {
 				<MDBCard reverse>
 					<MDBCardBody cascade className='text-center'>
 						<MDBCardTitle>
-							<h1>Al Hikma EG</h1>
+							<h1>Al Hikma</h1>
 						</MDBCardTitle>
 						<h5 className='indigo-text'>
 							<strong style={{ color: '#14a109' }}>Who are we?</strong>
@@ -65,22 +65,34 @@ function About() {
 						></div>
 						<MDBCardText>
 							<p style={{ fontSize: '20px' }}>
-								Al Hikma EG for export is a family business and Egyptian company
-								for exporting vegetables and fruits established in 1991. In
-								fact, our company aims to provide good quality oriented to
-								valuable customers. The founder is very passionate in this field
-								and has an excellent expertise in exporting to Europe and Gulf
-								countries since he had worked in Switzerland for more than 10
-								years as well as in Qatar for several years.
+							Al Hikma for export is a family business company for exporting vegetables and fruits that was established in 1991. In fact, our company aims to provide good quality oriented to valuable customers.
 							</p>{' '}
 							<p style={{ fontSize: '20px' }}>
-								We work in several vegetables and fruits: pomegranates, oranges
-								Valencia, Green Beans, lettuce iceberg, artichoke, onions,
-								potatoes Sponta, garlic, and watermelon, with respecting all the
-								quality procedures. Our merchandise is well selected and
-								professionally packaged to satisfy our customers. Our market is
-								mainly intended for Europe for example; France Belgium Italy,
-								Africa and Asia.{' '}
+							The founder is very passionate in this field and has an excellent expertise in exporting to Europe and Gulf countries since he had been leading a lot of firms in Switzerland for more than 10 years as well as in Qatar for several years.{' '}
+							</p>
+							<p style={{ fontSize: '20px' }}>
+							We work in several vegetables and fruits: pomegranates, oranges Valencia, Green Beans, lettuce iceberg, artichoke, onions, potatoes Sponta, garlic, and watermelon, with respecting all the quality procedures. Our merchandise is well selected and professionally packaged to satisfy our customers.{' '}	
+							</p>
+							<p style={{ fontSize: '20px' }}>
+							Our market is mainly intended for several countries in Europe, Asia, and Africa. Whether your business is looking to get started or it needs to expand, you can rest assured that we're going to help you. We’re committed to provide you with top quality product, approaching every client with a focus on integrity, quality, and understanding.
+
+							</p>
+							<h5 className='indigo-text'>
+								<strong style={{ color: '#14a109' }}>Our Mission</strong>
+							</h5>
+							<div
+								style={{
+									backgroundColor: '#4ed715',
+									height: '3px',
+									width: '50px',
+									marginTop: '1%',
+									marginLeft: '48%',
+									marginBottom: '2%',
+								}}
+							></div>
+							<p style={{ fontSize: '20px' }}>
+								{' '}
+								To achieve sustainable excellence and returns in our services, while ensuring worldwide fresh produce trade within international standards and procedures in a cost-effective manner.
 							</p>
 							<h5 className='indigo-text'>
 								<strong style={{ color: '#14a109' }}>Our Vision</strong>
@@ -97,11 +109,11 @@ function About() {
 							></div>
 							<p style={{ fontSize: '20px' }}>
 								{' '}
-								For the future, we anticipate expanding our market and exporting
-								Egyptian fruits and vegetables to the whole world and also
-								attracting potential customers. Browsing our site allows you to
-								know our products in full details.
+								For the future, we anticipate expanding our market and exporting Egyptian fruits and vegetables to the whole world in order to attract potential customers.
 							</p>
+							<p style={{ fontSize: '20px' }}>
+								{' '}
+								Browsing our website allows you to know our products in full details.							</p>
 							<h1
 								style={{
 									fontSize: '20px',
@@ -114,18 +126,7 @@ function About() {
 								{' '}
 								CEO Osman Mansour
 							</h1>
-							<h1
-								style={{
-									fontSize: '20px',
-									alignContent: 'right',
-									color: 'black',
-									fontWeight: 'bold',
-									marginLeft: '50%',
-								}}
-							>
-								{' '}
-								Marketing Manager Yasmina Osman
-							</h1>
+							
 						</MDBCardText>
 						<div
 							style={{

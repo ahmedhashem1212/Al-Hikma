@@ -105,7 +105,7 @@ function Header(props) {
 						}}
 						style={{ color: 'white', width: '15%' }}
 					>
-						<img src={logo} style={{ width: '120%', height: '60px' }} />
+						<img src={logo} style={{ width: '90%' }} />
 					</Navbar.Brand>
 
 					<Nav
@@ -196,7 +196,7 @@ function Header(props) {
 								props.setHome(false)
 								props.setAbout(true)
 							}}
-							style={{ color: 'white', marginTop: '0.8%' }}
+							style={{ color: 'white', marginTop: '0.7%' }}
 						>
 							<p style={{ fontSize: '13px' }}>
 								About Us <i class='fas fa-question' />

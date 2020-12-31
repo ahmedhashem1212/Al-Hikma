@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import nodemailer from 'nodemailer-react'
 import {
 	MDBContainer,
 	MDBRow,

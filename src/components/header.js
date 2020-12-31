@@ -205,14 +205,72 @@ function Header(props) {
                 style: {
                   maxHeight: ITEM_HEIGHT * 4.5,
                   width: '20ch',
+                  
                 },
               }}
             >
-              {options.map((option) => (
-                <MenuItem key={option} selected={option === 'Pyxis'} onClick={handleClose}>
-                  {option}
+                <MenuItem key={'Home'}  onClick={()=>{
+                  props.setContact(false)
+                  props.setCalender(false)
+                  props.setHome(true)
+                  props.setAbout(false)  
+                }}>
+                  Home
                 </MenuItem>
-              ))}
+
+                <MenuItem key={'Calender'}  onClick={()=>{
+                  props.setContact(false)
+                  props.setCalender(true)
+                  props.setHome(false)
+                  props.setAbout(false)  
+                }}>
+                  Calender
+                </MenuItem>
+                <MenuItem key={'ContactUs'}  onClick={()=>{
+                  props.setContact(true)
+                  props.setCalender(false)
+                  props.setHome(false)
+                  props.setAbout(false)  
+                }}>
+                  Contact Us
+                </MenuItem>
+                <MenuItem key={'Home'}  >
+                <Nav.Link id="nav-dropdown" href="fr" style={{ color: 'white' }}>
+              {' '}
+              <img
+                src={logo2}
+                style={{
+                  width: '30px',
+                  height: '27.5px',
+                  marginTop: 0,
+                  padding: 0,
+                }}
+              />
+            </Nav.Link>
+            <Nav.Link id="nav-dropdown" href="ar" style={{ color: 'white' }}>
+              {' '}
+              <img
+                src={logo3}
+                style={{
+                  width: '26px',
+                  height: '27px',
+                  marginTop: 0,
+                  padding: 0,
+                }}
+              />
+            </Nav.Link>
+            
+                </MenuItem>
+                <MenuItem key={'Home'}  onClick={()=>{
+                  props.setContact(false)
+                  props.setCalender(false)
+                  props.setHome(false)
+                  props.setAbout(true)  
+                }}>
+                  About us ?
+                </MenuItem>
+              
+
             </Menu>
           </Nav>
         </Navbar>

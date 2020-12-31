@@ -82,16 +82,16 @@ const HomeFR = (props) => {
 		{
 			name: 'Laitue Iceberg (Capucha)',
 			desc:
-				'La laitue iceberg fournit des quantités importantes de vitamines A et K. Elle contient également de petites quantités de nombreux autres nutriments sains. Il fournit également du calcium, du potassium, de la vitamine C et du folate.',
+				'Les anciens Égyptiens ont été les premiers à cultiver de la laitue à des fins de consommation La laitue fournit des quantités importantes de vitamines A et K. Elle fournit également du calcium, du potassium, de la vitamine C.',
 			type: 'Laitue iceberg',
 			Packing: 'Boîte carton-plastique 7/8 kg',
 			src: capucha,
 		},
 
 		{
-			name: 'Ail',
+			name: 'Ails',
 			desc:
-				"En Egypte, l'ail est très compétitif sur le marché international par rapport aux autres pays. Il a commencé à être exporté vers les pays du monde entier, l'ail égyptien est une excellente source de vitamines C et B6, de sélénium et de manganèse, et contient également des fibres, phosphore, potassium, calcium, fer et cuivre.",
+				" En Egypte, l'ail est très compétitif sur le marché international par rapport aux autres pays. Il a commencé à être exporté vers les pays du monde entier, l'ail égyptien est une excellente source de vitamines C et B6 et contient également des fibres, phosphore, potassium, calcium, fer et cuivre.",
 			type: 'Ail frais',
 			Packing: 'Carton-sac 5Kg',
 			src: garlic,
@@ -99,7 +99,7 @@ const HomeFR = (props) => {
 		{
 			name: 'Haricots Verts',
 			desc:
-				'Les haricots verts sont consommés dans le monde entier et vendus frais. Ils peuvent être consommés crus ou cuits à la vapeur, bouillis, sautés ou cuits au four. Nous exportons les haricots verts égyptiens pour plusieurs pays avec une bonne qualité et emballage.',
+				'Les haricots verts sont consommés dans le monde entier et vendus frais. Ils peuvent être consommés crus ou cuits à la vapeur, bouillis, sautés ou cuits au four. Nous exportons les haricots verts égyptiens pour plusieurs pays comme France, Belgique.',
 			type: 'Haricots verts frais',
 			Packing: 'Carton 5/8Kg',
 			src: beans,
@@ -108,16 +108,16 @@ const HomeFR = (props) => {
 			name: 'Oignons',
 			desc:
 				"L'un des trois principaux produits exportateurs d'Égypte, pour de nombreuses régions du monde. Nous avons les oignons rouges et les oignons bruns.",
-			type: 'oignons rouges-oignons bruns',
-			Packing: 'Sac rouge 10/25 Kg',
+			type: 'Oignons Rouges - Oignons Bruns',
+			Packing: 'Sac Rouge 10/25 Kg',
 			src: onion,
 		},
 
 		{
-			name: 'Artichaut: local / français 4,5 / 5 kg',
+			name: 'Artichaut',
 			desc:
-				"Les artichauts sont riches en fibres, vitamines, minéraux et antioxydants. Particulièrement riches en acide folique et en vitamines C et K, ils fournissent également des minéraux importants, tels que le magnésium, le phosphore, le potassium et le fer. L'artichaut égyptien a 2 variétés célèbres: l'artichaut local et l'artichaut français",
-			type: "l'artichaut local et l'artichaut français",
+				"Les artichauts sont riches en fibres, vitamines, minéraux et antioxydants. Particulièrement riches en acide folique et en vitamines C et K, L'artichaut égyptien a 2 variétés célèbres: l'artichaut local et l'artichaut français.",
+			type: "Artichaut local et Artichaut français",
 			Packing: 'Boîte en plastique -carton 4,5 / 5 kg',
 			src: artichoke,
 		},
@@ -126,7 +126,7 @@ const HomeFR = (props) => {
 		{
 			name: 'Raisins',
 			desc:
-				"Les raisins sont une bonne source de fibres, de potassium et d'une gamme de vitamines et d'autres minéraux. Nous exportons 3 célèbres variétés de raisins égyptiens: Flame, Superior et Crimson.",
+				"Les raisins sont une bonne source de fibres, de potassium et d'une gamme de vitamines. Nous exportons trois célèbres variétés de raisins égyptiens: Flame, Superior et Crimson.",
 			type: 'Flamme-Superior-Crimson',
 			Packing: 'Boîte en plastique -carton 5 kg',
 			src: grapes,
@@ -134,7 +134,7 @@ const HomeFR = (props) => {
 		{
 			name: 'Pastèques',
 			desc:
-				"Généralement, la pastèque a une teneur élevée en eau et est l'une des plus faibles en calories. La principale variété de pastèque en Égypte est Skata.",
+				"Généralement, la pastèque a une teneur élevée en eau et l'une des plus faibles en calories. La principale variété de pastèque en Égypte est Skata.",
 			type: 'Skata',
 			Packing: 'Carton 20 kg',
 			src: watermelons,
@@ -142,7 +142,7 @@ const HomeFR = (props) => {
 		{
 			name: 'Citron',
 			desc:
-				"Les citrons sont un type d'agrumes à peau jaune qui poussent sur le citronnier. Tous les types de citrons sont connus pour leur goût acide et acidulé, certaines variétés étant plus sucrées que d'autres. En fait, nous exportons actuellement le citron égyptien pour de nombreux pays.",
+				"Les citrons sont un type d'agrumes à peau jaune qui poussent sur le citronnier. Tous les types de citrons sont connus pour leur goût acide. En fait, il est le champion de Vitamine C.",
 			type: 'Citron Adalia',
 			Packing: 'Plastic box -carton 15 kg',
 			src: lemon,
@@ -151,7 +151,7 @@ const HomeFR = (props) => {
 		{
 			name: 'Grenade',
 			desc:
-				'Les grenades sont parmi les fruits les plus sains au monde. Les grenades sont une source de fibres, de vitamines B, de vitamine C, de vitamine K et de potassium.',
+				'Les grenades sont parmi les fruits les plus sains au monde. C’est une source de fibres, de vitamines B, de vitamine C, de vitamine K et de potassium.',
 			type: 'Wonderful',
 			Packing: 'Carton 4/5 kg',
 			src: pomegranate,
@@ -159,7 +159,7 @@ const HomeFR = (props) => {
 		{
 			name: 'Oranges',
 			desc:
-				"Il existe de nombreuses variétés d'oranges sur le marché .Les oranges Valencia sont juteuses et ont le rapport parfait de saveur sucrée-acidulée, ce qui en fait d'excellentes oranges à jus. Les navels sont des oranges délicieusement douces avec moins de piquant que les oranges de Valence. Ils sont merveilleux à mélanger dans une salade pour donner une saveur douce et rafraîchissante.",
+				"Les oranges Valencia sont juteuses et ont le rapport parfait de saveur sucrée-acidulée, ce qui en fait d'excellentes oranges à jus. Les navels sont des oranges délicieusement douces avec moins de piquant que les oranges de Valence. Ils sont merveilleux à mélanger dans une salade pour donner une saveur douce et rafraîchissante.",
 			type: 'Valence-Navel',
 			Packing: 'Carton 15 kg',
 			src: orange,
@@ -170,18 +170,17 @@ const HomeFR = (props) => {
 		{
 			title: 'AL HIKMA For Export ',
 			description:
-				'Al Hikma EG for export est une compagnie familiale d’exportation des légumes et fruits d’origine égyptienne établit en 1991',
+				'Al Hikma for export est une compagnie familiale d’exportation des légumes et fruits d’origine égyptienne établit en 1991. En fait, notre compagnie a pour but de fournir une bonne qualité des produits orientés aux clients précieux',
 			button: 'Apprendre Encore Plus',
 			image: fruits,
 		},
 		{
 			title: 'Travailler dans plusieurs légumes et fruits',
 			description:
-				'En fait, notre compagnie a pour but de fournir une bonne qualité des produits orientés aux clients précieux',
+				'Notre but est de fournir une bonne qualité des légumes et fruits orientés aux clients précieux',
 			button: 'Voir nos Produits',
 			image: fruits2,
-			user: 'Erich Behrens',
-			userProfile: 'https://i.imgur.com/0Clfnu7.png',
+
 		},
 	]
 

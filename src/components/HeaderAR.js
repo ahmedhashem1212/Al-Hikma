@@ -77,7 +77,8 @@ function HeaderAR(props) {
 	return (
 		<div
 			style={{
-				background: '#14a109',
+				background:
+					'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(20,161,9,1) 100%)',
 				//#80C721
 				//#62A83D
 				//opacity: '80%',
@@ -97,14 +98,18 @@ function HeaderAR(props) {
 							props.setContact(false)
 							props.setAbout(false)
 						}}
-						style={{ color: 'white', width: '15%', height: '60px' }}
+						style={{ color: 'white', width: '15%' }}
 					>
-						<img src={logo} style={{ width: 200, marginLeft: '2%' }} />
+						<img src={logo} style={{ width: '90%' }} />
 					</Navbar.Brand>
 
 					<Nav
-						className='justify-content-end'
-						style={{ paddingLeft: '40%', width: '80%' }}
+							className='justify-content-end'
+							style={{
+								paddingLeft: '30%',
+								width: '80%',
+								height: '50px',
+							}}
 					>
 						<Nav.Link
 							id='nav-dropdown'
@@ -186,11 +191,13 @@ function HeaderAR(props) {
 								props.setContact(false)
 								props.setAbout(true)
 							}}
-							style={{ color: 'white' }}
-						>
-							<i class='fas fa-question' style={{ transform: 'scaleX(-1)' }} />
-						</Nav.Link>
-					</Nav>
+							style={{ color: 'white',marginTop: '0.7%' }}
+							>
+								<p style={{ fontSize: '13px' }}>
+								<i class='fas fa-question' style={{ transform: 'scaleX(-1)' }} /> معلومات عنا
+								</p>						
+								</Nav.Link>
+						</Nav>
 				</Navbar>
 			) :(
 				<Navbar style={{ marginLeft: '-50px' }}>

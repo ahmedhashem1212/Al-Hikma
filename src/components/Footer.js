@@ -28,11 +28,10 @@ const useStyles = makeStyles((theme) => ({
 }))
 function Footer(props) {
 	const classes = useStyles()
-	const homee =()=>{
+	const homee = () => {
 		props.setHome(true)
-						props.setCalender(false)
-						props.setContact(false)
-						
+		props.setCalender(false)
+		props.setContact(false)
 	}
 	return (
 		<MDBFooter
@@ -54,21 +53,20 @@ function Footer(props) {
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
 						<p>
-							Al Hikma EG for export is a family business and Egyptian company
-							for exporting vegetables and fruits established in 1991. In fact,
-							our company aims to provide good quality oriented to valued
-							customers.
+						Al Hikma for export is an Egyptian company established in 1991 for exporting quality vegetables and fruits. At Al Hikma, you will find a team of highly skilled professionals in the field of fruits and vegetables supply and logistics. 
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
 					<MDBCol md='2' lg='2' xl='2' className='mx-auto mt-3'>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Products</h6>
 						<p>
-							<a onClick={props.home?props.executeScroll2:(homee)}>Fruits</a>
+							<a onClick={props.home ? props.executeScroll2 : homee}>Fruits</a>
 						</p>
 						<p>
 							{console.log(props.home)}
-							<a onClick={props.home?props.executeScroll:(homee)}>Vegetables</a>
+							<a onClick={props.home ? props.executeScroll : homee}>
+								Vegetables
+							</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
@@ -77,24 +75,37 @@ function Footer(props) {
 							Useful links
 						</h6>
 						<p>
-							<a onClick={() => {props.setHome(true)
-						props.setCalender(false)
-						props.setContact(false)
-					}}>Home</a>
+							<a
+								onClick={() => {
+									props.setHome(true)
+									props.setCalender(false)
+									props.setContact(false)
+								}}
+							>
+								Home
+							</a>
 						</p>
 						<p>
-							<a onClick={() => {props.setCalender(true)
-						props.setContact(false)
-						props.setHome(false)
-					}}>Calender</a>
+							<a
+								onClick={() => {
+									props.setCalender(true)
+									props.setContact(false)
+									props.setHome(false)
+								}}
+							>
+								Calender
+							</a>
 						</p>
 						<p>
-							<a onClick={() => {
-							props.setContact(true)
-							props.setCalender(false)
-							props.setHome(false)
-						
-						}}>Contact us</a>
+							<a
+								onClick={() => {
+									props.setContact(true)
+									props.setCalender(false)
+									props.setHome(false)
+								}}
+							>
+								Contact us
+							</a>
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />

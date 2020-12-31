@@ -78,7 +78,8 @@ function HeaderFR(props) {
   return (
     <div
       style={{
-        background: '#14a109',
+        background:
+        'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(20,161,9,1) 100%)',
         //#80C721
         //#62A83D
         // opacity: '80%',
@@ -92,19 +93,25 @@ function HeaderFR(props) {
       {matches ? (
         <Navbar>
           <Navbar.Brand
-            onClick={() => {
-              props.setHome(true)
-              props.setCalender(false)
-              props.setContact(false)
-              props.setContact(false)
-              props.setAbout(false)
-            }}
-            style={{ color: 'white', width: '15%', height: '60px' }}
-          >
-            <img src={logo} style={{ width: 200, marginLeft: '2%' }} />
-          </Navbar.Brand>
+						onClick={() => {
+							props.setHome(true)
+							props.setCalender(false)
+							props.setContact(false)
+							props.setAbout(false)
+						}}
+						style={{ color: 'white', width: '15%' }}
+					>
+						<img src={logo} style={{ width: '90%' }} />
+					</Navbar.Brand>
 
-          <Nav className="justify-content-end" style={{ paddingLeft: '30%', width: '80%' }}>
+          <Nav
+						className='justify-content-end'
+						style={{
+							paddingLeft: '30%',
+							width: '80%',
+							height: '50px',
+						}}
+					>
             <Nav.Link
               id="nav-dropdown"
               onClick={() => {
@@ -174,10 +181,12 @@ function HeaderFR(props) {
                 props.setCalender(false)
                 props.setContact(false)
                 props.setAbout(true)
-              }} style={{ color: 'white' }}>
-              
-                <i class="fas fa-question" />
-            </Nav.Link>
+              }} style={{ color: 'white', marginTop: '0.7%' }}
+              >
+                <p style={{ fontSize: '13px' }}>
+                À propos de nous <i class='fas fa-question' />
+                </p>
+              </Nav.Link>
           </Nav>
         </Navbar>
       ) : (

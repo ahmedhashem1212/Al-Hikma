@@ -77,9 +77,9 @@ const HomeEN = (props) => {
 		{
 			name: 'Potatoes',
 			desc:
-				'Potatoes is one of fresh products that Egypt specialized to grow, packing and export for many regions in the world. Spunta is a very conventional and well-known potato, suitable for production in many climates. Spunta potatoes are yellow fleshed, and make fantastic potato salads. They are also great steamed or boiled.',
+				'Potatoes is one of fresh products that Egypt specialized to grow, packing and export for many regions in the world.\n Spunta is a very conventional and well-known potato, suitable for production in many climates.\n Spunta potatoes are yellow fleshed, and make fantastic potato salads.',
 			type: 'Spunta',
-			Packing: 'Yellow bag 10 /25 Kg',
+			Packing: 'Yellow Bag 10 /25 Kg',
 			src: potato,
 		},
 		{
@@ -94,7 +94,7 @@ const HomeEN = (props) => {
 		{
 			name: 'Garlic',
 			desc:
-				'In Egypt, garlic is strong competitive in the international market in compare with other countries.it has begun to be exported to countries worldwide, the Egyptian garlic is an excellent source of vitamins C and B6, selenium, and manganese, and also contains some fiber, phosphorus, potassium, calcium, iron, and copper. ',
+				' In Egypt, garlic is strong competitive in the international market in compare with other countries.it has begun to be exported to countries worldwide, the Egyptian garlic is an excellent source of vitamins C and B6, and manganese, and also contains some fiber, phosphorus, potassium, calcium and iron.',
 			type: 'Fresh Garlic',
 			Packing: 'Carton-bag 5Kg',
 			src: garlic,
@@ -102,16 +102,16 @@ const HomeEN = (props) => {
 		{
 			name: 'Green beans',
 			desc:
-				'Green beans are eaten around the world, and are sold fresh and frozen. They can be eaten raw or steamed, boiled, stir-fried, or baked. We export the Egyptian green beans for several country with good quality and packing.',
-			type: 'Fresh green beans',
+				'Green beans can be eaten raw or steamed, boiled, stir-fried, or baked. We export the Egyptian green beans for several country such as France and Belgium with good quality and packing. ',
+			type: 'Fresh Green Beans',
 			Packing: 'Carton 5/8Kg',
 			src: beans,
 		},
 		{
 			name: 'Onions',
 			desc:
-				'One of top three exporting products from Egypt, for many regions in the world. We have the red onions and brown onions.',
-			type: 'Red Onions-brown Onions',
+				'One of top three exporting products from Egypt, for many regions in the world. We export two types of onions.',
+			type: 'Red Onions - Brown Onions',
 			Packing: 'Red bag 10 /25 Kg',
 			src: onion,
 		},
@@ -119,7 +119,7 @@ const HomeEN = (props) => {
 		{
 			name: 'Artichoke',
 			desc:
-				'Artichokes are rich in fiber, vitamins, minerals, and antioxidants. Particularly high in folate and vitamins C and K, they also supply important minerals, such as magnesium, phosphorus, potassium, and iron. The Egyptian artichoke has 2 famous varieties: the local artichoke and the French artichoke',
+				'Artichokes are rich in fiber, vitamins, minerals, and antioxidants. Particularly high in folate and vitamins C and K, they also supply important minerals, such as magnesium, phosphorus, potassium, and iron. The Egyptian artichoke has two famous types are Local artichoke and the French artichoke.',
 			type: 'Local artichoke and the French artichoke ',
 			Packing: 'Plastic Box-carton 4.5/ 5 kg',
 			src: artichoke,
@@ -129,7 +129,7 @@ const HomeEN = (props) => {
 		{
 			name: 'Grapes',
 			desc:
-				'Grapes are a good source of fiber, potassium, and a range of vitamins and other minerals. We export 3 famous varieties of the Egyptian grapes: Flame, Superior and Crimson.',
+				'Grapes are a good source of fiber, potassium, and a range of vitamins and other minerals. We export three famous varieties of the Egyptian grapes.',
 			type: 'Flame-Superior-Crimson',
 			Packing: 'Plastic Box-carton 5 kg',
 			src: grapes,
@@ -137,7 +137,7 @@ const HomeEN = (props) => {
 		{
 			name: 'Lemons',
 			desc:
-				'Lemons are a type of yellow-skinned citrus fruits that grow on the lemon tree. All types of lemons are known for their acidic, sour taste with some varieties being sweeter than others. We are actually exporting the Egyptian lemon for many countries.',
+				'Lemons are a type of yellow-skinned citrus fruits that grow on the lemon tree. All types of lemons are known for their acidic. Lemon is the champion fruit in Vitamin C.',
 			type: 'Adalia Lemon',
 			Packing: 'Plastic Box-carton 15 kg',
 			src: lemon,
@@ -146,7 +146,7 @@ const HomeEN = (props) => {
 		{
 			name: 'Pomegranate',
 			desc:
-				'Pomegranates are among the healthiest fruits on Earth. They contain a range of beneficial plant compounds, unrivaled by other foods. Pomegranates are a source of fiber, B vitamins, vitamin C, vitamin K and potassium.',
+				'Pomegranates are among the healthiest fruits on Earth. They contain a range of beneficial plant. Pomegranates are a source of Fiber, Vitamin B, Vitamin C, Vitamin K and Potassium.',
 			type: 'Wonderful',
 			Packing: 'Carton 4/5 kg',
 			src: pomegranate,
@@ -154,7 +154,7 @@ const HomeEN = (props) => {
 		{
 			name: 'Watermelons',
 			desc:
-				'Generally, watermelon has a high water content.  As far as fruits go, watermelon is one of the lowest in calories. The main exporting variety for the watermelon in Egypt is Skata.',
+				'Generally, watermelon has a high water content.  As far as fruits go, watermelon is one of the lowest in calories. The main exporting type for the watermelon in Egypt is Skata.',
 			type: 'Skata',
 			Packing: 'carton 20 kg',
 			src: watermelons,
@@ -173,7 +173,7 @@ const HomeEN = (props) => {
 		{
 			title: 'AL HIKMA For Export ',
 			description:
-				'Al Hikma EG for export is a family business and Egyptian company for exporting vegetables and fruits established in 1991',
+				'Al Hikma for export is an Egyptian company established in 1991 for exporting quality vegetables and fruits. At Al Hikma, you will find a team of highly skilled professionals in the field of fruits and vegetables supply and logistics.',
 			button: 'Learn more',
 			image: fruits,
 		},
@@ -183,8 +183,6 @@ const HomeEN = (props) => {
 				'Our company aims to provide good quality oriented to valued customers',
 			button: 'See our Products',
 			image: fruits2,
-			user: 'Erich Behrens',
-			userProfile: 'https://i.imgur.com/0Clfnu7.png',
 		},
 	]
 

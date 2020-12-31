@@ -25,131 +25,145 @@ import logo2 from '../FR.png'
 import logo3 from '../EG.png'
 import 'bootstrap/dist/css/bootstrap.min.css'
 const useStyles = makeStyles((theme) => ({
-  backgroundContainer: {
-    background: '#14a109',
-    //#80C721
-    //#62A83D
-    //opacity: '80%',
-    top: '0',
+	backgroundContainer: {
+		background: '#14a109',
+		//#80C721
+		//#62A83D
+		//opacity: '80%',
+		top: '0',
 
-    left: '0',
-    zIndex: '1',
-    position: 'sticky',
-    width: '100%',
-  },
-  backgroundContainersmall: {
-    background: '#14a109',
-    //#80C721
-    //#62A83D
-    //opacity: '80%',
-    top: '0',
-    padding: '0.75rem 2rem',
-    left: '0',
-    zIndex: '1',
-    position: 'sticky',
-    width: '100%',
-  },
-  meliorLogo: {
-    width: 180,
-    marginLeft: '2%',
-  },
+		left: '0',
+		zIndex: '1',
+		position: 'sticky',
+		width: '100%',
+	},
+	backgroundContainersmall: {
+		background: '#14a109',
+		//#80C721
+		//#62A83D
+		//opacity: '80%',
+		top: '0',
+		padding: '0.75rem 2rem',
+		left: '0',
+		zIndex: '1',
+		position: 'sticky',
+		width: '100%',
+	},
+	meliorLogo: {
+		width: 180,
+		marginLeft: '2%',
+	},
 }))
 
 function Header(props) {
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const open = Boolean(anchorEl)
+	const [anchorEl, setAnchorEl] = React.useState(null)
+	const open = Boolean(anchorEl)
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget)
-  }
+	const handleClick = (event) => {
+		setAnchorEl(event.currentTarget)
+	}
 
-  const handleClose = () => {
-    setAnchorEl(null)
-  }
-  const homee = () => {
-    props.setHome(true)
-    props.setCalender(false)
-    props.setContact(false)
-    props.setAbout(false)
-    
-  }
+	const handleClose = () => {
+		setAnchorEl(null)
+	}
+	const homee = () => {
+		props.setHome(true)
+		props.setCalender(false)
+		props.setContact(false)
+		props.setAbout(false)
+	}
 
-  const classes = useStyles()
-  const theme = useTheme()
-  const matches = useMediaQuery(theme.breakpoints.up('md'))
-  const options = ['Home', 'Vegetables', 'Fruits', 'Calender']
-  const ITEM_HEIGHT = 48
+	const classes = useStyles()
+	const theme = useTheme()
+	const matches = useMediaQuery(theme.breakpoints.up('md'))
+	const options = ['Home', 'Vegetables', 'Fruits', 'Calender']
+	const ITEM_HEIGHT = 48
 
-  return (
-    <div
-      style={{
-        background: '#14a109',
-        //#80C721
-        //#62A83D
-        //opacity: '80%',
-        top: '0',
-        left: '0',
-        zIndex: '1',
-        position: 'sticky',
-        width: '100%',
-      }}
-    >
-      {matches ? (
-        <Navbar>
-          <Navbar.Brand
-            onClick={() => {
-              props.setHome(true)
-              props.setCalender(false)
-              props.setContact(false)
-              props.setAbout(false)
-            }}
-            style={{ color: 'white', width: '15%', height: '60px' }}
-          >
-            <img src={logo} style={{ width: 200, marginLeft: '2%' }} />
-          </Navbar.Brand>
+	return (
+		<div
+			style={{
+				background:
+					'linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(20,161,9,1) 100%)',
+				//#80C721
+				//#62A83D
+				//opacity: '80%',
+				top: '0',
+				left: '0',
+				zIndex: '1',
+				position: 'sticky',
+				width: '100%',
+			}}
+		>
+			{matches ? (
+				<Navbar>
+					<Navbar.Brand
+						onClick={() => {
+							props.setHome(true)
+							props.setCalender(false)
+							props.setContact(false)
+							props.setAbout(false)
+						}}
+						style={{ color: 'white', width: '15%' }}
+					>
+						<img src={logo} style={{ width: '90%' }} />
+					</Navbar.Brand>
 
-          <Nav className="justify-content-end" style={{ paddingLeft: '30%', width: '80%' }}>
-            <Nav.Link
-              id="nav-dropdown"
-              onClick={() => {
-                props.setHome(true)
-                props.setCalender(false)
-                props.setContact(false)
-                props.setAbout(false)
-              }}
-              style={{ color: 'white' }}
-            >
-              Home
-            </Nav.Link>
-            <NavDropdown title={'Products'} id="nav-dropdown">
-              <NavDropdown.Item onClick={props.home ? props.executeScroll : homee}>Vegetables</NavDropdown.Item>
-              <NavDropdown.Item onClick={props.home ? props.executeScroll2 : homee}>Fruits</NavDropdown.Item>
-            </NavDropdown>
-            <Nav.Link
-              id="nav-dropdown"
-              onClick={() => {
-                props.setCalender(true)
-                props.setContact(false)
-                props.setHome(false)
-                props.setAbout(false)
-              }}
-              style={{ color: 'white' }}
-            >
-              Calender
-            </Nav.Link>
-            <Nav.Link
-              id="nav-dropdown"
-              style={{ color: 'white' }}
-              onClick={() => {
-                props.setContact(true)
-                props.setCalender(false)
-                props.setHome(false)
-                props.setAbout(false)
-              }}
-            >
-              Contact Us
-            </Nav.Link>
-
+					<Nav
+						className='justify-content-end'
+						style={{
+							paddingLeft: '30%',
+							width: '80%',
+							height: '50px',
+						}}
+					>
+						<Nav.Link
+							id='nav-dropdown'
+							onClick={() => {
+								props.setHome(true)
+								props.setCalender(false)
+								props.setContact(false)
+								props.setAbout(false)
+							}}
+							style={{ color: 'white' }}
+						>
+							Home
+						</Nav.Link>
+						<NavDropdown title={'Products'} id='nav-dropdown'>
+							<NavDropdown.Item
+								onClick={props.home ? props.executeScroll : homee}
+							>
+								Vegetables
+							</NavDropdown.Item>
+							<NavDropdown.Item
+								onClick={props.home ? props.executeScroll2 : homee}
+							>
+								Fruits
+							</NavDropdown.Item>
+						</NavDropdown>
+						<Nav.Link
+							id='nav-dropdown'
+							onClick={() => {
+								props.setCalender(true)
+								props.setContact(false)
+								props.setHome(false)
+								props.setAbout(false)
+							}}
+							style={{ color: 'white' }}
+						>
+							Calender
+						</Nav.Link>
+						<Nav.Link
+							id='nav-dropdown'
+							style={{ color: 'white' }}
+							onClick={() => {
+								props.setContact(true)
+								props.setCalender(false)
+								props.setHome(false)
+								props.setAbout(false)
+							}}
+						>
+							Contact Us
+						</Nav.Link>
             <Nav.Link id="nav-dropdown" href="fr" style={{ color: 'white' }}>
               {' '}
               <img

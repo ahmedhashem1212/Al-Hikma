@@ -53,10 +53,7 @@ function Footer(props) {
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
 						<p>
-							Al Hikma EG for export is a family business and Egyptian company
-							for exporting vegetables and fruits established in 1991. In fact,
-							our company aims to provide good quality oriented to valued
-							customers.
+						Al Hikma for export is an Egyptian company established in 1991 for exporting quality vegetables and fruits. At Al Hikma, you will find a team of highly skilled professionals in the field of fruits and vegetables supply and logistics. 
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />

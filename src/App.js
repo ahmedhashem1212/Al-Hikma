@@ -1,6 +1,5 @@
 import Text, { useState } from 'react'
 import './App.css'
-import AuthenticatedApp from './components/AuthenticatedApp'
 import { MuiPickersUtilsProvider } from '@material-ui/pickers'
 import DateFnsUtils from '@date-io/date-fns'
 import { Switch, BrowserRouter, Route } from 'react-router-dom'
@@ -24,10 +23,6 @@ import About from './components/Aboutus'
 import AboutFR from './components/AboutusFR'
 import AboutAR from './components/AboutusAR'
 
-// function AppSwitch() {
-//   // const { user } = useContext(AuthenticationContext)
-//   // return user ? <AuthenticatedApp /> : <UnauthenticatedApp />
-// }
 import React, { useRef } from 'react'
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop)
 function App() {
@@ -67,6 +62,12 @@ function App() {
 						}
 					/>
 				) : home == true ? (
+					window.location.href[window.location.href.length - 2] +window.location.href[window.location.href.length - 1]=='fr' ||			
+					window.location.href[window.location.href.length - 2] +
+					window.location.href[window.location.href.length - 1]=='en' ||
+					
+					window.location.href[window.location.href.length - 2] +
+							window.location.href[window.location.href.length - 1]=='ar'?(
 					<Redirect
 						exact
 						to={
@@ -74,7 +75,11 @@ function App() {
 							window.location.href[window.location.href.length - 2] +
 							window.location.href[window.location.href.length - 1]
 						}
-					/>
+					/>):(
+					<Redirect
+						exact
+						to={'/' +'en'}
+					/>)
 				) : contact == true ? (
 					<Redirect
 						exact

@@ -199,50 +199,95 @@ function HeaderAR(props) {
 								</Nav.Link>
 						</Nav>
 				</Navbar>
-			) : (
+			) :(
 				<Navbar style={{ marginLeft: '-50px' }}>
-					<Navbar.Brand
-						href='#home'
-						style={{ color: 'white', width: '15%', marginLeft: 0 }}
+				  <Navbar.Brand href="#home" style={{ color: 'white', width: '15%', marginLeft: 0 }}>
+					<img src={logo} style={{ width: '150px' }} />
+				  </Navbar.Brand>
+				  <Nav style={{ paddingLeft: '80%' }}>
+					<IconButton aria-label="more" aria-controls="long-menu" aria-haspopup="true" onClick={handleClick} style={{ color: 'white' }}>
+					  <MoreVertIcon />
+					</IconButton>
+					<Menu
+					  id="long-menu"
+					  anchorEl={anchorEl}
+					  keepMounted
+					  open={open}
+					  onClose={handleClose}
+					  PaperProps={{
+						style: {
+						  maxHeight: ITEM_HEIGHT * 4.5,
+						  width: '20ch',
+						  
+						},
+					  }}
 					>
-						<img src={logo} style={{ width: '150px' }} />
-					</Navbar.Brand>
-					<Nav style={{ paddingLeft: '80%' }}>
-						<IconButton
-							aria-label='more'
-							aria-controls='long-menu'
-							aria-haspopup='true'
-							onClick={handleClick}
-							style={{ color: 'white' }}
-						>
-							<MoreVertIcon />
-						</IconButton>
-						<Menu
-							id='long-menu'
-							anchorEl={anchorEl}
-							keepMounted
-							open={open}
-							onClose={handleClose}
-							PaperProps={{
-								style: {
-									maxHeight: ITEM_HEIGHT * 4.5,
-									width: '20ch',
-								},
-							}}
-						>
-							{options.map((option) => (
-								<MenuItem
-									key={option}
-									selected={option === 'Pyxis'}
-									onClick={handleClose}
-								>
-									{option}
-								</MenuItem>
-							))}
-						</Menu>
-					</Nav>
+						<MenuItem key={'Home'}  onClick={()=>{
+						  props.setContact(false)
+						  props.setCalender(false)
+						  props.setHome(true)
+						  props.setAbout(false)  
+						}}>
+						  الرئيسية
+						</MenuItem>
+		
+						<MenuItem key={'Calender'}  onClick={()=>{
+						  props.setContact(false)
+						  props.setCalender(true)
+						  props.setHome(false)
+						  props.setAbout(false)  
+						}}>
+						  الأجندة
+						</MenuItem>
+						<MenuItem key={'ContactUs'}  onClick={()=>{
+						  props.setContact(true)
+						  props.setCalender(false)
+						  props.setHome(false)
+						  props.setAbout(false)  
+						}}>
+						  اتصل بنا
+						</MenuItem>
+						<MenuItem key={'Home'}  >
+						<Nav.Link id="nav-dropdown" href="fr" style={{ color: 'white' }}>
+					  {' '}
+					  <img
+						src={logo2}
+						style={{
+						  width: '30px',
+						  height: '27.5px',
+						  marginTop: 0,
+						  padding: 0,
+						}}
+					  />
+					</Nav.Link>
+					<Nav.Link id="nav-dropdown" href="en" style={{ color: 'white' }}>
+					  {' '}
+					  <img
+						src={logo1}
+						style={{
+						  width: '26px',
+						  height: '27px',
+						  marginTop: 0,
+						  padding: 0,
+						}}
+					  />
+					</Nav.Link>
+					
+						</MenuItem>
+						<MenuItem key={'Home'}  onClick={()=>{
+						  props.setContact(false)
+						  props.setCalender(false)
+						  props.setHome(false)
+						  props.setAbout(true)  
+						}}>
+						  معلومات عننا ؟
+						</MenuItem>
+					  
+		
+					</Menu>
+				  </Nav>
 				</Navbar>
-			)}
+			  )}
 		</div>
 	)
 }

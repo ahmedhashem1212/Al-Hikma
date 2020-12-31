@@ -177,7 +177,7 @@ const HomeFR = (props) => {
 		{
 			title: 'Travailler dans plusieurs légumes et fruits',
 			description:
-				'En fait, notre compagnie a pour but de fournir une bonne qualité des produits orientés aux clients précieux',
+				'Notre but est de fournir une bonne qualité des légumes et fruits orientés aux clients précieux',
 			button: 'Voir nos Produits',
 			image: fruits2,
 

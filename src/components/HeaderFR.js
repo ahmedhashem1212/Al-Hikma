@@ -190,11 +190,11 @@ function HeaderFR(props) {
           </Nav>
         </Navbar>
       ) : (
-        <Navbar style={{ marginLeft: '-50px' }}>
-          <Navbar.Brand href="#home" style={{ color: 'white', width: '15%', marginLeft: 0 }}>
-            <img src={logo} style={{ width: '150px' }} />
-          </Navbar.Brand>
-          <Nav style={{ paddingLeft: '80%' }}>
+        <Navbar style={{ marginLeft: 0 }}>
+        <Navbar.Brand href="#home" style={{ color: 'white', width: '15%', marginLeft:-10 }}>
+          <img src={logo} style={{ width: '150px' }} />
+        </Navbar.Brand>
+        <Nav style={{ paddingLeft: '75%' }}>
             <IconButton aria-label="more" aria-controls="long-menu" aria-haspopup="true" onClick={handleClick} style={{ color: 'white' }}>
               <MoreVertIcon />
             </IconButton>

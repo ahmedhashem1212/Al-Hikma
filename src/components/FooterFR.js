@@ -44,13 +44,12 @@ function FooterFR(props) {
 			}}
 		>
 			<MDBContainer className='text-center text-md-left'>
-				<MDBRow className='text-center text-md-left mt-3 pb-3' style={{height: '200px' }}>
+				<MDBRow className='text-center text-md-left mt-3 pb-3' >
 					<MDBCol
 						md='3'
 						lg='2'
 						xl='3'
 						className='mx-auto mt-3'
-						style={{ height: '230px' }}
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
 						<p>

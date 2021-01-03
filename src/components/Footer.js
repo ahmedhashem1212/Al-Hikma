@@ -39,11 +39,11 @@ function Footer(props) {
 			className='font-medium pt-4 mt-4'
 			style={{
 				background: '#14a109',
-				//opacity: '80%',
+				opacity: '90%',
 			}}
 		>
 			<MDBContainer className='text-center text-md-left' >
-				<MDBRow className='text-center text-md-left mt-3 pb-3' style={{height: '200px' }}>
+				<MDBRow className='text-center text-md-left mt-3 pb-3' >
 					<MDBCol
 						md='3'
 						lg='2'

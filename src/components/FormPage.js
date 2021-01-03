@@ -23,7 +23,6 @@ const FormPage = () => {
 			subject: subject,
 			message: message,
 		}
-		console.log(fullMessage)
 		window.emailjs
 			.send(
 				'gmail',
@@ -37,8 +36,12 @@ const FormPage = () => {
 				'user_4JzcHgNROI2pAXMv78Dpc'
 			)
 			.then((res) => {
-				console.log('Email successfully sent!')
+				setName('')
+				setEmail('')
+				setSubject('')
+				setMessage('')
 			})
+
 	}
 
 	return (
@@ -130,11 +133,9 @@ const FormPage = () => {
 								</MDBCol>
 							</MDBRow>
 						</form>
-						{/* <MDBBtn color="green" size="md" style={{color:'white'}}>
-              Send
-            </MDBBtn> */}
+					
 					</MDBCol>
-					<MDBCol md='3' className='text-center' style={{ marginTop: '70px' }}>
+					<MDBCol md='3' className='text-center' style={{ bottom: '50px' }}>
 						<ul className='list-unstyled mb-0'>
 							<li>
 								<MDBIcon
@@ -152,6 +153,22 @@ const FormPage = () => {
 									className='green-text mt-4'
 								/>
 								<p>info@Alhikma.com.eg</p>
+							</li>
+							<li>
+								<MDBIcon
+									icon='phone'
+									size='2x'
+									className='green-text mt-4'
+								/>
+								<p>+974 6618 7100</p>
+							</li>
+							<li>
+								<MDBIcon
+									icon='phone'
+									size='2x'
+									className='green-text mt-4'
+								/>
+								<p>+2 01274556177</p>
 							</li>
 						</ul>
 					</MDBCol>

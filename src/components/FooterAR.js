@@ -66,12 +66,12 @@ function Footer(props) {
 						<p>
 							<i className='fa fa-envelope mr-3' /> info@alhikmaeg.com
 						</p>
-						{/* <p>
-							<i className='fa fa-phone mr-3' /> + 01 234 567 88
+						<p>
+							<i className='fa fa-phone mr-3' /> +۹۷٤ ٦٦۱۸ ۷۱۰۰
 						</p>
 						<p>
-							<i className='fa fa-print mr-3' /> + 01 234 567 89
-						</p> */}
+							<i className='fa fa-phone mr-3' /> +۲ ۰۱۲۷٤٥٥٦۱۷۷
+						</p>
 					</MDBCol>
 
 					<hr className='w-100 clearfix d-md-none' />

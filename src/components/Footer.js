@@ -43,7 +43,7 @@ function Footer(props) {
 			}}
 		>
 			<MDBContainer className='text-center text-md-left' >
-				<MDBRow className='text-center text-md-left mt-3 pb-3' style={{height: '185px' }}>
+				<MDBRow className='text-center text-md-left mt-3 pb-3' style={{height: '200px' }}>
 					<MDBCol
 						md='3'
 						lg='2'
@@ -62,7 +62,6 @@ function Footer(props) {
 							<a onClick={props.home ? props.executeScroll2 : homee}>Fruits</a>
 						</p>
 						<p>
-							{console.log(props.home)}
 							<a onClick={props.home ? props.executeScroll : homee}>
 								Vegetables
 							</a>
@@ -116,12 +115,12 @@ function Footer(props) {
 						<p>
 							<i className='fa fa-envelope mr-3' /> info@alhikmaeg.com
 						</p>
-						{/* <p>
-							<i className='fa fa-phone mr-3' /> + 01 234 567 88
+						<p>
+							<i className='fa fa-phone mr-3' /> +974 6618 7100
 						</p>
 						<p>
-							<i className='fa fa-print mr-3' /> + 01 234 567 89
-						</p> */}
+							<i className='fa fa-phone mr-3' /> +2 01274556177
+						</p>
 					</MDBCol>
 				</MDBRow>
 				<hr />

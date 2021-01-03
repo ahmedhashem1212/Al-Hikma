@@ -194,9 +194,11 @@ function Header(props) {
                 props.setHome(false)
                 props.setAbout(true)
               }}
-             style={{ color: 'white'}}>
-                <i class="fas fa-question" />
-              
+			  style={{ color: 'white', marginTop: '0.7%' }}
+              >
+                <p style={{ fontSize: '13px' }}>
+                 About us <i class='fas fa-question' />
+                </p>
             </Nav.Link>
           </Nav>
         </Navbar>

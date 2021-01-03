@@ -42,18 +42,17 @@ function Footer(props) {
 				//opacity: '80%',
 			}}
 		>
-			<MDBContainer className='text-center text-md-left'>
-				<MDBRow className='text-center text-md-left mt-3 pb-3'>
+			<MDBContainer className='text-center text-md-left' >
+				<MDBRow className='text-center text-md-left mt-3 pb-3' style={{height: '185px' }}>
 					<MDBCol
 						md='3'
 						lg='2'
 						xl='3'
 						className='mx-auto mt-3'
-						style={{ height: '200px' }}
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
 						<p>
-						Al Hikma for export is an Egyptian company established in 1991 for exporting quality vegetables and fruits. At Al Hikma, you will find a team of highly skilled professionals in the field of fruits and vegetables supply and logistics. 
+						Al Hikma for export is an Egyptian company established in 1991 for exporting quality vegetables and fruits. 
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />

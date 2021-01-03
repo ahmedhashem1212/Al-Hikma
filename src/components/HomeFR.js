@@ -144,7 +144,7 @@ const HomeFR = (props) => {
 			desc:
 				"Les citrons sont un type d'agrumes à peau jaune qui poussent sur le citronnier. Tous les types de citrons sont connus pour leur goût acide. En fait, il est le champion de Vitamine C.",
 			type: 'Citron Adalia',
-			Packing: 'Plastic box -carton 15 kg',
+			Packing: 'Boîte en Plastique 15 kg',
 			src: lemon,
 		},
 
@@ -159,7 +159,7 @@ const HomeFR = (props) => {
 		{
 			name: 'Oranges',
 			desc:
-				"Les oranges Valencia sont juteuses et ont le rapport parfait de saveur sucrée-acidulée, ce qui en fait d'excellentes oranges à jus. Les navels sont des oranges délicieusement douces avec moins de piquant que les oranges de Valence. Ils sont merveilleux à mélanger dans une salade pour donner une saveur douce et rafraîchissante.",
+				"Les oranges Valencia sont juteuses et ont le rapport parfait de saveur sucrée-acidulée, ce qui en fait d'excellentes oranges à jus. Les navels sont des oranges délicieusement douces avec moins de piquant que les oranges de Valence.",
 			type: 'Valence-Navel',
 			Packing: 'Carton 15 kg',
 			src: orange,

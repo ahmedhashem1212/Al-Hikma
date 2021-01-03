@@ -162,7 +162,7 @@ const HomeEN = (props) => {
 		{
 			name: 'Oranges',
 			desc:
-				'There are many orange varieties in the market but there are two cultivars that top all the charts: the sweet snacking Navel Orange and the refreshingly juicy Valencia Orange. Valencia oranges are juicy and have the perfect ratio of sweet-tart flavor making them great juicing oranges. Navels are deliciously sweet oranges with less tang than Valencia oranges. They are wonderful to snack on and tossed in a salad to give a sweet and refreshing flavor.',
+				'There are many orange varieties in the market but there are two cultivars that top all the charts: the sweet snacking Navel Orange and the refreshingly juicy Valencia Orange. Valencia oranges are juicy and have the perfect ratio of sweet-tart flavor making them great juicing oranges. Navels are deliciously sweet oranges with less tang than Valencia oranges.',
 			type: 'Valencia-Navel',
 			Packing: 'Carton 15 kg',
 			src: orange,

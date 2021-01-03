@@ -40,10 +40,11 @@ function FooterFR(props) {
 			style={{
 				background: '#14a109',
 				//opacity: '80%',
+				 
 			}}
 		>
 			<MDBContainer className='text-center text-md-left'>
-				<MDBRow className='text-center text-md-left mt-3 pb-3'>
+				<MDBRow className='text-center text-md-left mt-3 pb-3' style={{height: '185px' }}>
 					<MDBCol
 						md='3'
 						lg='2'
@@ -53,7 +54,7 @@ function FooterFR(props) {
 					>
 						<h6 className='text-uppercase mb-4 font-weight-bold'>Al Hikma</h6>
 						<p>
-						Al Hikma for export est une compagnie familiale d’exportation des légumes et fruits d’origine égyptienne établit en 1991. En fait, notre compagnie a pour but de fournir une bonne qualité des produits orientés aux clients précieux.
+						Al Hikma for export est une compagnie familiale d’exportation des légumes et fruits d’origine égyptienne établit en 1991.
 						</p>
 					</MDBCol>
 					<hr className='w-100 clearfix d-md-none' />
